@@ -3,10 +3,11 @@ import './Header.css';
 
 
 function Header() {
+    //TODO: Remake navbar
     return(
         <header className="header">
             <div className="logo">
-                IFI-Rom
+                IFI-Rom - Tittel he
             </div>
             <ul className="liste">
                 <li className="liste"><a href="default.asp">Hjem</a></li>
