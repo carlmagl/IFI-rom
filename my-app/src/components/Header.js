@@ -9,10 +9,10 @@ function Header() {
                 IFI-Rom
             </div>
             <ul className="liste">
-                <li className="liste"><a href="default.asp">Home</a></li>
-                <li className="liste"><a href="default.asp">Home</a></li>
-                <li className="liste"><a href="default.asp">Home</a></li>
-                <li className="liste"><a href="default.asp">Home</a></li>
+                <li className="liste"><a href="default.asp">Hjem</a></li>
+                <li className="liste"><a href="default.asp">Info</a></li>
+                <li className="liste"><a href="default.asp">Om oss</a></li>
+                <li className="liste"><a href="default.asp">Kontakt</a></li>
             </ul>
         </header>
     )
