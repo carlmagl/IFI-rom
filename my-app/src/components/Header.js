@@ -13,7 +13,7 @@ function Header() {
                 <li className="liste"><a href="default.asp">Hjem</a></li>
                 <li className="liste"><a href="default.asp">Info</a></li>
                 <li className="liste"><a href="default.asp">Om oss</a></li>
-                <li className="liste"><a href="default.asp">Kontakt</a></li>
+                <li className="liste"><a href="default.asp">Kontact</a></li>
             </ul>
         </header>
     )
