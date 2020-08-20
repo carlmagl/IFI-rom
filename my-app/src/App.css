@@ -2,7 +2,16 @@
   text-align: center;
 }
 
+body{
+  font-family: 'Inter', sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.Content{
+  height: 90vh;
 }
