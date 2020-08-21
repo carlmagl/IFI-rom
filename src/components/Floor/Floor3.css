@@ -5,3 +5,12 @@
 .svg{
     width: 60%; height: auto
 }
+
+rect:hover{
+    fill: red;
+}
+
+
+path:hover{
+    fill: red;
+}

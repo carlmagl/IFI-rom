@@ -1,0 +1,30 @@
+.room{
+    width: 240px;
+    height: 240px;
+    margin: 40px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.room:hover{
+    background-color: lightblue;
+}
+
+.liste{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input{
+    margin: 100px;
+}
+
+.roomLink{
+    text-decoration: none;
+    color: black;
+}

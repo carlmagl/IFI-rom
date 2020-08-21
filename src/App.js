@@ -6,8 +6,7 @@ import Rooms from './components/Rooms/Rooms.js';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Floor1 from './components/Floor/Floor1.js';
 import Floor2 from './components/Floor/Floor2.js';
@@ -22,7 +21,6 @@ function App() {
         <Switch>
           <Route path="/" exact>
           <Rooms/>
-            <div className="Content"/>
           </Route>
 
           <Route path="/1etasje">

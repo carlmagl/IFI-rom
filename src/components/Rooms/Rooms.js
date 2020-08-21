@@ -1,6 +1,7 @@
 import React from 'react';
 import './Rooms.css';
 import etajse from './3etasje.svg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -130,15 +131,19 @@ const rooms =
 ]
     return(
         <section>
-            <img src={etajse} alt="3 etasje på Ole Johan Dahls Hus"/>
-            <input/>
-            <ul>
-                {rooms.map((room) => 
-                    <li key={room.roomnumber}>
+            <div className="input">
+                <p>Søk på navn, romnummer eller etasje</p>
+                <input className="inputField"/>
+            </div>
+            <ul className="liste">
+                {rooms.map((room) =>
+                <Link className="roomLink" to="/3etasje">
+                    <li key={room.roomnumber} className="room">
                         <p>{room.name}</p>
                         <p>Etasje: {room.floor}</p>
                         <p>Rom nummer: {room.roomnumber}</p>
                     </li>
+                </Link>
                 )}
             </ul>
         </section>
