@@ -135,8 +135,7 @@ const shownList = rooms.filter(room => room.name.includes(input) || room.roomnum
     return(
         <section>
             <div className="input">
-                <p>Søk på navn, romnummer eller etasje</p>
-                <input className="inputField" onChange={(e) =>{
+                <input className="inputField" placeholder="Søk på navn, etasje eller nummer" onChange={(e) =>{
                     setInput(e.target.value);
                 }}/>
             </div>
