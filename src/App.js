@@ -16,25 +16,25 @@ import Floor3 from './components/Floor/Floor3.js';
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Router>
-        <Switch>
-          <Route path="/" exact>
-          <Rooms/>
-          </Route>
+        <Header/>
+          <Switch>
+            <Route path="/" exact>
+            <Rooms/>
+            </Route>
 
-          <Route path="/1etasje">
-            <Floor1/>
-          </Route>
-          <Route path="/2etasje">
-            <Floor2/>
-          </Route>
-          <Route path="/3etasje">
-            <Floor3/>
-          </Route>
-        </Switch>
+            <Route path="/1etasje">
+              <Floor1/>
+            </Route>
+            <Route path="/2etasje">
+              <Floor2/>
+            </Route>
+            <Route path="/3etasje">
+              <Floor3/>
+            </Route>
+          </Switch>
+        <Footer/>
       </Router>
-      <Footer/>
     </div>
   );
 }

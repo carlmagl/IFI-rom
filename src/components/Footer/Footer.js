@@ -8,9 +8,9 @@ function Footer() {
         <footer className="footer">
             <ul className="footerList">
                 <li>
-                <p>
-                    Laget av Carl-Magnus Lein
-                </p>
+                    <p>
+                        Laget av Carl-Magnus Lein
+                    </p>
                 </li>
             </ul>
         </footer>
