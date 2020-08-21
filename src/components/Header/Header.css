@@ -12,3 +12,8 @@
 .logo{
     color: white;
 }
+
+.logoLink{
+    text-decoration: none;
+    color: white;
+}
