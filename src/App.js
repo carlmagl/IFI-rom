@@ -22,7 +22,6 @@ function App() {
             <Route path="/" exact>
             <Rooms/>
             </Route>
-
             <Route path="/1etasje/:roomnumber">
               <Floor1/>
             </Route>

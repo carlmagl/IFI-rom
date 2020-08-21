@@ -10,7 +10,7 @@ function Header() {
             <div className="logo">
                 <Link className="logoLink" to="/">
                     <h1 className="logoText">
-                        Rom på Ole Johan Dahls Hus 
+                        IFI-rom
                     </h1>
                 </Link>
             </div>
