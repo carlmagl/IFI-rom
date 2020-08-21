@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Rooms.css';
-import etajse from './3etasje.svg';
 import { Link } from 'react-router-dom';
 
 
 
 function Rooms(){
+
+const [input, setInput] = useState("");
+
 const rooms = 
 [
     {
@@ -129,19 +131,22 @@ const rooms =
         roomnumber: '3468'
     },
 ]
+const shownList = rooms.filter(room => room.name.includes(input) || room.roomnumber.includes(input) || room.floor == input);
     return(
         <section>
             <div className="input">
                 <p>Søk på navn, romnummer eller etasje</p>
-                <input className="inputField"/>
+                <input className="inputField" onChange={(e) =>{
+                    setInput(e.target.value);
+                }}/>
             </div>
             <ul className="liste">
-                {rooms.map((room) =>
-                <Link className="roomLink" to="/3etasje">
+                {shownList.map((room) =>
+                <Link className="roomLink" to={`/${room.floor}etasje/${room.roomnumber}`}>
                     <li key={room.roomnumber} className="room">
                         <p>{room.name}</p>
                         <p>Etasje: {room.floor}</p>
-                        <p>Rom nummer: {room.roomnumber}</p>
+                        <p>Nummer: {room.roomnumber}</p>
                     </li>
                 </Link>
                 )}

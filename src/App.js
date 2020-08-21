@@ -23,13 +23,13 @@ function App() {
             <Rooms/>
             </Route>
 
-            <Route path="/1etasje">
+            <Route path="/1etasje/:roomnumber">
               <Floor1/>
             </Route>
-            <Route path="/2etasje">
+            <Route path="/2etasje/:roomnumber">
               <Floor2/>
             </Route>
-            <Route path="/3etasje">
+            <Route path="/3etasje/:roomnumber">
               <Floor3/>
             </Route>
           </Switch>
