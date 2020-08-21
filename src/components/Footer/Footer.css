@@ -1,6 +1,11 @@
 .footer{
     margin: 0;
+    background-color: lightgray;
+    height: 300px;
     size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerList{
