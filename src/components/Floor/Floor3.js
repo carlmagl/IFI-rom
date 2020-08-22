@@ -1,5 +1,5 @@
 import React from 'react';
-import './Floor3.css';
+import './Floor.css';
 import { useParams } from 'react-router-dom';
 
 

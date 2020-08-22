@@ -133,7 +133,7 @@ const rooms =
 ]
 const shownList = rooms.filter(room => room.name.toLowerCase().includes(input.toLowerCase()) || room.roomnumber.includes(input) || room.floor.includes(input));
     return(
-        <section>
+        <section className="mainContent">
             <div className="input">
                 <input className="inputField" placeholder="Søk på navn, etasje eller nummer" onChange={(e) =>{
                     setInput(e.target.value);
@@ -143,7 +143,7 @@ const shownList = rooms.filter(room => room.name.toLowerCase().includes(input.to
                 {shownList.map((room) =>
                 <Link className="roomLink" to={`/${room.floor}etasje/${room.roomnumber}`} key={room.roomnumber}>
                     <li className="room">
-                        <p>{room.name}</p>
+                        <p className="tittel">{room.name}</p>
                         <p>Etasje: {room.floor}</p>
                         <p>Nummer: {room.roomnumber}</p>
                     </li>
