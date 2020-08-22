@@ -20,15 +20,15 @@ function App() {
         <Header/>
           <Switch>
             <Route path="/" exact>
-            <Rooms/>
+              <Rooms/>
             </Route>
-            <Route path="/1etasje/:roomnumber">
+            <Route path="/1etasje/:roomnumber" exact>
               <Floor1/>
             </Route>
-            <Route path="/2etasje/:roomnumber">
+            <Route path="/2etasje/:roomnumber" exact>
               <Floor2/>
             </Route>
-            <Route path="/3etasje/:roomnumber">
+            <Route path='/3etasje/:roomnumber' exact>
               <Floor3/>
             </Route>
           </Switch>
