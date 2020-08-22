@@ -1,8 +1,12 @@
+.mainContent{
+  min-height: 60vh;
+}
+
 .room{
     width: 240px;
     height: 240px;
     margin: 40px;
-    background-color: grey;
+    background-color: #1d3557;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +15,7 @@
 }
 
 .room:hover{
-    background-color: lightblue;
+    background-color: #457b9d;
 }
 
 .liste{
@@ -29,5 +33,10 @@
 
 .roomLink{
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+.tittel{
+    margin: 0 0 40px 0;
+    font-size: 40px;
 }
