@@ -4,12 +4,17 @@ import { useParams } from 'react-router-dom';
 
 
 function Floor3(){
+
+    //TODO: Use react-router-dom for params, ugly shitcode for now
     let { id } = useParams();
-    console.log(id)
+    let tempID = window.location.pathname;
+    console.log(tempID)
+    let regID = tempID.substring(9,13)
+    console.log(regID)
 
     function checkRoom(roomnumber){
         console.log(roomnumber)
-        if(3459 === roomnumber) return "active";
+        if(regID == roomnumber) return "active";
         return "nonactive";
     }
     
@@ -18,7 +23,7 @@ function Floor3(){
         <section className="main">
             <svg className="svg" width="422" height="2413" viewBox="0 0 422 2413" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect className={checkRoom(3459)} x="129.5" y="60.5" width="292" height="2352" fill="#EDDEB7" stroke="black"/>
-                <rect x="320.5" y="0.5" width="101" height="197" fill="#C4C4C4" stroke="black"/>
+                <rect className={checkRoom(3468)} x="320.5" y="0.5" width="101" height="197" fill="#C4C4C4" stroke="black"/>
                 <rect x="320.5" y="197.5" width="101" height="163" fill="#C4C4C4" stroke="black"/>
                 <rect x="228.5" y="0.5" width="92" height="88" fill="#C4C4C4" stroke="black"/>
                 <rect x="228.5" y="88.5" width="92" height="27" fill="#C4C4C4" stroke="black"/>
