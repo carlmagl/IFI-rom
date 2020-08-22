@@ -6,11 +6,11 @@
     width: 60%; height: auto
 }
 
-rect:hover{
+.active{
     fill: red;
 }
 
 
-path:hover{
-    fill: red;
+.nonactive{
+    fill:#c4c4c4;
 }

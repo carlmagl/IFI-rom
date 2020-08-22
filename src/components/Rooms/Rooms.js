@@ -131,7 +131,7 @@ const rooms =
         roomnumber: '3468'
     },
 ]
-const shownList = rooms.filter(room => room.name.includes(input) || room.roomnumber.includes(input) || room.floor == input);
+const shownList = rooms.filter(room => room.name.toLowerCase().includes(input.toLowerCase()) || room.roomnumber.includes(input) || room.floor.includes(input));
     return(
         <section>
             <div className="input">
@@ -141,8 +141,8 @@ const shownList = rooms.filter(room => room.name.includes(input) || room.roomnum
             </div>
             <ul className="liste">
                 {shownList.map((room) =>
-                <Link className="roomLink" to={`/${room.floor}etasje/${room.roomnumber}`}>
-                    <li key={room.roomnumber} className="room">
+                <Link className="roomLink" to={`/${room.floor}etasje/${room.roomnumber}`} key={room.roomnumber}>
+                    <li className="room">
                         <p>{room.name}</p>
                         <p>Etasje: {room.floor}</p>
                         <p>Nummer: {room.roomnumber}</p>
