@@ -6,11 +6,13 @@ import Rooms from './components/Rooms/Rooms.js';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Floor1 from './components/Floor/Floor1.js';
 import Floor2 from './components/Floor/Floor2.js';
 import Floor3 from './components/Floor/Floor3.js';
+import Map from './components/Map/Map.js';
 
 
 function App() {
@@ -31,6 +33,10 @@ function App() {
             <Route path='/3etasje/:roomnumber' exact>
               <Floor3/>
             </Route>
+            <Route path='/kart' exact>
+              <Map/>
+            </Route>
+            <Redirect to='/' />
           </Switch>
         <Footer/>
       </Router>
