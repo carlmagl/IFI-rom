@@ -6,17 +6,17 @@ import { useParams } from 'react-router-dom';
 function Floor3(){
 
     //TODO: Use react-router-dom for params, ugly shitcode for now
-    let { id } = useParams();
+    //let { id } = useParams();
     let tempID = window.location.pathname;
     console.log(tempID)
     let regID = tempID.substring(9,13)
     console.log(regID)
 
-    function checkRoom(roomnumber){
-        console.log(roomnumber)
-        if(regID == roomnumber) return "active";
-        return "nonactive";
-    }
+    //function checkRoom(roomnumber){
+    //    console.log(roomnumber)
+    //    if(parseInt(regID) === roomnumber) return "active";
+    //    return "nonactive";
+    //}
     
     
     return(
