@@ -1,6 +1,6 @@
 import React from 'react';
 import './Floor.css';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 
 
 function Floor3(){
