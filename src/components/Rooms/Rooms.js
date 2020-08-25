@@ -9,7 +9,7 @@ function Rooms(){
 const [input, setInput] = useState("");
 
 const rooms = 
-[
+[   
     {
         name: 'Scheme',
         floor: '1',
@@ -23,7 +23,8 @@ const rooms =
     {
         name: 'Simula',
         floor: '1',
-        roomnumber: '1423'
+        roomnumber: '1423',
+        type: 'Forelesningssal'
     },
     {
         name: 'Sed',
@@ -129,7 +130,7 @@ const rooms =
         name: 'Fortress',
         floor: '3',
         roomnumber: '3468'
-    },
+    }
 ]
 const shownList = rooms.filter(room => room.name.toLowerCase().includes(input.toLowerCase()) || room.roomnumber.includes(input) || room.floor.includes(input));
     return(
@@ -144,8 +145,9 @@ const shownList = rooms.filter(room => room.name.toLowerCase().includes(input.to
                 <Link className="roomLink" to={`/${room.floor}etasje/${room.roomnumber}`} key={room.roomnumber}>
                     <li className="room">
                         <p className="tittel">{room.name}</p>
+                        {room.type && <p>{room.type}</p>}
                         <p>Etasje: {room.floor}</p>
-                        <p>Nummer: {room.roomnumber}</p>
+                        {room.roomnumber && <p>Nummer: {room.roomnumber}</p>}
                     </li>
                 </Link>
                 )}

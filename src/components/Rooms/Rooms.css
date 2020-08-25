@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .room:hover{
@@ -39,4 +40,6 @@
 .tittel{
     margin: 0 0 40px 0;
     font-size: 40px;
+    overflow: hidden;
+    word-break: break-all;
 }
