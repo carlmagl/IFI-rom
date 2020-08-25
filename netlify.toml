@@ -1,0 +1,19 @@
+# For further configuration see link below:
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish="build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# [[redirects]]
+  # from = "/search"
+  # to = "https://api.mysearch.com"
+  # status = 200
+  # force = true # COMMENT: ensure that we always redirect
+  # headers = {X-From = "Netlify"}
+  # signed = "API_SIGNATURE_TOKEN"
