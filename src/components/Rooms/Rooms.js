@@ -24,12 +24,14 @@ const Rooms = (props) => {
   }
   const rooms = data.items;
   console.log("Rooms:", rooms[0].fields);
-  const shownList = rooms.filter(
-    (room) =>
-      room.fields.name.toLowerCase().includes(input.toLowerCase()) ||
-      room.fields.roomnumber.includes(input) ||
-      room.fields.floor.includes(input)
-  );
+  const shownList = rooms
+    .filter(
+      (room) =>
+        room.fields.name.toLowerCase().includes(input.toLowerCase()) ||
+        room.fields.roomnumber.includes(input) ||
+        room.fields.floor.includes(input)
+    )
+    .sort((a, b) => a.fields.name.localeCompare(b.fields.name));
   return (
     <section className="mainContent">
       <div className="input">
