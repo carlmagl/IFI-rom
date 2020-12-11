@@ -12,6 +12,7 @@ import {
 import Floor1 from "./components/Floor/Floor1.js";
 import Floor2 from "./components/Floor/Floor2.js";
 import Floor3 from "./components/Floor/Floor3.js";
+import Foreninger from "./components/Foreninger/Foreninger.js";
 import Map from "./components/Map/Map.js";
 import { ContentfulClient, ContentfulProvider } from "react-contentful";
 
@@ -27,20 +28,23 @@ function App() {
         <Router>
           <Header />
           <Switch>
-            <Route path="/" exact>
+            <Route exact path="/">
               <Rooms />
             </Route>
-            <Route path="/1etasje/:roomnumber" exact>
+            <Route path="/1etasje/:roomnumber">
               <Floor1 />
             </Route>
-            <Route path="/2etasje/:roomnumber" exact>
+            <Route path="/2etasje/:roomnumber">
               <Floor2 />
             </Route>
-            <Route path="/3etasje/:roomnumber" exact>
+            <Route path="/3etasje/:roomnumber">
               <Floor3 />
             </Route>
-            <Route path="/kart" exact>
+            <Route path="/kart">
               <Map />
+            </Route>
+            <Route path="/foreninger">
+              <Foreninger />
             </Route>
             <Redirect to="/" />
           </Switch>

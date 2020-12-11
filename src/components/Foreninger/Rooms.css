@@ -1,0 +1,55 @@
+.mainContent {
+  min-height: 60vh;
+}
+
+.room {
+  width: 240px;
+  height: 240px;
+  background-color: #1d3557;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.room:hover {
+  background-color: #457b9d;
+}
+
+.liste {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.input {
+  width: 100%;
+  margin: 100px 0;
+}
+
+.inputField {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.roomLink {
+  text-decoration: none;
+  color: white;
+  margin: 40px;
+}
+
+.tittel {
+  margin: 0 0 40px 0;
+  font-size: 40px;
+  overflow: hidden;
+  word-break: break-all;
+}

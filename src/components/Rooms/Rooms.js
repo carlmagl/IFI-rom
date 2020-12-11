@@ -5,6 +5,7 @@ import { useContentful } from "react-contentful";
 
 const Rooms = (props) => {
   const [input, setInput] = useState("");
+  console.log("Input:", input);
   const { data, error, fetched, loading } = useContentful({
     contentType: "rooms",
   });
@@ -144,11 +145,11 @@ const Rooms = (props) => {
     return <p>Page does not exist.</p>;
   }
   const rooms = data.items;
-  console.log(rooms);
+  console.log("Rooms:", rooms[0].fields);
   const shownList = rooms.filter(
     (room) =>
       room.fields.name.toLowerCase().includes(input.toLowerCase()) ||
-      room.fields.roomnnumber.includes(input) ||
+      room.fields.roomnumber.includes(input) ||
       room.fields.floor.includes(input)
   );
   return (

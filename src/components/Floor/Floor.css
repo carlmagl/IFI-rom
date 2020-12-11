@@ -1,16 +1,30 @@
-.main{
-    margin: 40px 40px;
+.main {
+  overflow: scroll;
+  box-sizing: border-box;
+  padding: 100px 40px 20px 40px;
+  height: 75vh;
+  align-items: center;
 }
 
-.svg{
-    width: 60%; height: auto
+.active {
+  fill: red;
+  animation-name: color;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
 
-.active{
-    fill: red;
+@keyframes color {
+  0% {
+    fill: #c4c4c4;
+  }
+  50% {
+    fill: #457b9d;
+  }
+  100% {
+    fill: #c4c4c4;
+  }
 }
 
-
-.nonactive{
-    fill:#c4c4c4;
+.nonactive {
+  fill: #c4c4c4;
 }
