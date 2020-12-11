@@ -1,13 +1,12 @@
-.footer{
-    margin: 0;
-    background-color: #f1faee;
-    height: 300px;
-    size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer {
+  margin: 0;
+  background-color: #f1faee;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footerList{
-    list-style: none;
+.footerList {
+  list-style: none;
 }
