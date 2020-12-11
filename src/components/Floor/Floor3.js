@@ -3,9 +3,8 @@ import "./Floor.css";
 import { useParams, useLocation } from "react-router-dom";
 
 function Floor3() {
-  //TODO: Use react-router-dom for params, ugly shitcode for now
   const location = useLocation();
-  console.log(location.pathname); // see below
+  console.log(location.pathname);
   let { roomnumber } = useParams();
   console.log("RoomNumber:", roomnumber);
 

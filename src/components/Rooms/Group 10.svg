@@ -1,0 +1,47 @@
+<svg width="2413" height="484" viewBox="0 0 2413 484" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1874 0V139.728H1939V192L2137 192V139.728V0L1939 0H1874Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1874 0V139.728H1939V192L2137 192V139.728V0L1939 0H1874Z" fill="#C4C4C4"/>
+<path d="M1874 139.728H1873V140.728H1874V139.728ZM1874 0V-1H1873V0H1874ZM1939 139.728H1940V138.728H1939V139.728ZM1939 192H1938V193H1939V192ZM2137 192V193H2138V192H2137ZM2137 0H2138V-1H2137V0ZM1875 139.728V0H1873V139.728H1875ZM1939 138.728H1874V140.728H1939V138.728ZM1940 192V139.728H1938V192H1940ZM2137 191L1939 191V193L2137 193V191ZM2136 139.728V192H2138V139.728H2136ZM2136 0V139.728H2138V0H2136ZM1939 1L2137 1V-1L1939 -1V1ZM1874 1H1939V-1H1874V1Z" fill="black" mask="url(#path-1-inside-1)"/>
+<rect x="1874.5" y="191.5" width="52" height="65" transform="rotate(-90 1874.5 191.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1870.5" y="385.5" width="95" height="60" transform="rotate(-90 1870.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1929.5" y="385.5" width="95" height="44" transform="rotate(-90 1929.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1940.5" y="265.5" width="55" height="33" transform="rotate(-90 1940.5 265.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="2005.5" y="385.5" width="37" height="42" transform="rotate(-90 2005.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="2005.5" y="265.5" width="74" height="46" transform="rotate(-90 2005.5 265.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="2051.5" y="265.5" width="74" height="40" transform="rotate(-90 2051.5 265.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="2091.5" y="265.5" width="53" height="29" transform="rotate(-90 2091.5 265.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="2120.5" y="265.5" width="53" height="29" transform="rotate(-90 2120.5 265.5)" fill="#C4C4C4" stroke="black"/>
+<mask id="path-12-inside-2" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1973 191V386H2006V290H2149H2170V265V213V191H2149H2091V213H2149V265H2006V191H1973Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1973 191V386H2006V290H2149H2170V265V213V191H2149H2091V213H2149V265H2006V191H1973Z" fill="#EDDEB7"/>
+<path d="M1973 386H1972V387H1973V386ZM1973 191V190H1972V191H1973ZM2006 386V387H2007V386H2006ZM2006 290V289H2005V290H2006ZM2170 290V291H2171V290H2170ZM2170 191H2171V190H2170V191ZM2091 191V190H2090V191H2091ZM2091 213H2090V214H2091V213ZM2149 213H2150V212H2149V213ZM2149 265V266H2150V265H2149ZM2006 265H2005V266H2006V265ZM2006 191H2007V190H2006V191ZM1974 386V191H1972V386H1974ZM2006 385H1973V387H2006V385ZM2005 290V386H2007V290H2005ZM2006 291H2149V289H2006V291ZM2149 291H2170V289H2149V291ZM2171 290V265H2169V290H2171ZM2171 265V213H2169V265H2171ZM2171 213V191H2169V213H2171ZM2170 190H2149V192H2170V190ZM2149 190H2091V192H2149V190ZM2090 191V213H2092V191H2090ZM2091 214H2149V212H2091V214ZM2148 213V265H2150V213H2148ZM2149 264H2006V266H2149V264ZM2005 191V265H2007V191H2005ZM1973 192H2006V190H1973V192Z" fill="black" mask="url(#path-12-inside-2)"/>
+<rect x="1463.5" y="385.5" width="13" height="27" transform="rotate(-90 1463.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1490.5" y="385.5" width="13" height="17" transform="rotate(-90 1490.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1463.5" y="372.5" width="82" height="44" transform="rotate(-90 1463.5 372.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1430.5" y="370.5" width="80" height="33" transform="rotate(-90 1430.5 370.5)" fill="#EDDEB7" stroke="black"/>
+<rect x="1345.5" y="336.5" width="46" height="85" transform="rotate(-90 1345.5 336.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="1391.5" y="370.5" width="34" height="39" transform="rotate(-90 1391.5 370.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="935.5" y="385.5" width="13" height="26" transform="rotate(-90 935.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="961.5" y="385.5" width="13" height="16" transform="rotate(-90 961.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="935.5" y="372.5" width="82" height="42" transform="rotate(-90 935.5 372.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="902.5" y="368.5" width="78" height="33" transform="rotate(-90 902.5 368.5)" fill="#EDDEB7" stroke="black"/>
+<rect x="863.5" y="368.5" width="32" height="39" transform="rotate(-90 863.5 368.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="822.5" y="336.5" width="46" height="80" transform="rotate(-90 822.5 336.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="320.5" y="385.5" width="31" height="41" transform="rotate(-90 320.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="320.5" y="354.5" width="32" height="41" transform="rotate(-90 320.5 354.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="320.5" y="322.5" width="32" height="41" transform="rotate(-90 320.5 322.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="361.5" y="385.5" width="95" height="31" transform="rotate(-90 361.5 385.5)" fill="#EDDEB7" stroke="black"/>
+<rect x="392.5" y="385.5" width="12" height="14" transform="rotate(-90 392.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="406.5" y="385.5" width="12" height="29" transform="rotate(-90 406.5 385.5)" fill="#C4C4C4" stroke="black"/>
+<rect x="392.5" y="373.5" width="83" height="43" transform="rotate(-90 392.5 373.5)" fill="#C4C4C4" stroke="black"/>
+<mask id="path-33-inside-3" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 192L0 386H58L58 484L2413 484V386V379V192L0 192Z"/>
+</mask>
+<path d="M0 386H-1L-1 387H0L0 386ZM0 192L0 191H-1L-1 192H0ZM58 386H59V385H58V386ZM58 484H57V485H58V484ZM2413 484V485H2414V484H2413ZM2413 192H2414V191H2413V192ZM1 386L1 192H-1L-1 386H1ZM58 385H0L0 387H58V385ZM59 484L59 386H57L57 484H59ZM2413 483L58 483V485L2413 485V483ZM2412 386V484H2414V386H2412ZM2412 379V386H2414V379H2412ZM2412 192V379H2414V192H2412ZM0 193L2413 193V191L0 191L0 193Z" fill="black" mask="url(#path-33-inside-3)"/>
+<line x1="1342.5" y1="192" x2="1342.5" y2="95" stroke="black"/>
+<line x1="1342.85" y1="94.5222" x2="1633.94" y2="4.80362" stroke="black"/>
+<line x1="1692.52" y1="192.15" x2="1633.52" y2="4.14971" stroke="black"/>
+</svg>
