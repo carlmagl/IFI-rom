@@ -12,6 +12,7 @@ import {
 import Floor1 from "./components/Floor/Floor1.js";
 import Floor2 from "./components/Floor/Floor2.js";
 import Floor3 from "./components/Floor/Floor3.js";
+
 import Foreninger from "./components/Foreninger/Foreninger.js";
 import Map from "./components/Map/Map.js";
 import { ContentfulClient, ContentfulProvider } from "react-contentful";
