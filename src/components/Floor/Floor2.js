@@ -55,6 +55,7 @@ function Floor3() {
           height="94"
           transform="rotate(-90 71.5 402.5)"
           fill="#C4C4C4"
+          className={checkRoom(0)}
           stroke="black"
         />
         <rect
