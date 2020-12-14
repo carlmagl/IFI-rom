@@ -34,7 +34,7 @@ const Foreninger = () => {
         <input
           type="text"
           className="inputField"
-          placeholder="Søk på navn, etasje eller nummer"
+          placeholder="Søk på navn"
           onChange={(e) => {
             setInput(e.target.value);
           }}
