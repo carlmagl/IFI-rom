@@ -1,10 +1,11 @@
 .footer {
   margin: 0;
-  background-color: #f1faee;
+  background-color: #bdb9af;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #1d3557;
 }
 
 .footerList {

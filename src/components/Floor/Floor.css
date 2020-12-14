@@ -2,8 +2,11 @@
   overflow: scroll;
   box-sizing: border-box;
   padding: 100px 40px 20px 40px;
-  height: 75vh;
   align-items: center;
+}
+
+.backButton {
+  margin: 40px 0;
 }
 
 .active {
