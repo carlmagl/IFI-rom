@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./Rooms.css";
-import { Link } from "react-router-dom";
 import { useContentful } from "react-contentful";
 
-const Foreninger = (props) => {
+const Foreninger = () => {
   const [input, setInput] = useState("");
+
+  //TODO: Uncomment when contentfull is implemented
   const { data, error, fetched, loading } = useContentful({
-    contentType: "rooms",
+    contentType: "foreninger",
   });
   if (loading || !fetched) {
     return null;
@@ -20,14 +21,13 @@ const Foreninger = (props) => {
   if (!data) {
     return <p>Page does not exist.</p>;
   }
-  const rooms = data.items;
-  console.log(rooms);
-  const shownList = rooms.filter(
-    (room) =>
-      room.fields.name.toLowerCase().includes(input.toLowerCase()) ||
-      room.fields.roomnnumber.includes(input) ||
-      room.fields.floor.includes(input)
-  );
+  const foreninger = data.items;
+  console.log(foreninger);
+  const shownList = foreninger
+    .filter((room) =>
+      room.fields.tittel.toLowerCase().includes(input.toLowerCase())
+    )
+    .sort((a, b) => a.fields.tittel.localeCompare(b.fields.tittel));
   return (
     <section className="mainContent">
       <div className="input">
@@ -41,21 +41,20 @@ const Foreninger = (props) => {
         />
       </div>
       <ul className="liste">
-        {shownList.map((room) => (
-          <Link
+        {shownList.map((forening) => (
+          <a
             className="roomLink"
-            to={`/${room.fields.floor}etasje/${room.fields.roomnumber}`}
-            key={room.fields.roomnumber}
+            target="_blank"
+            rel="noreferrer"
+            href={`${forening.fields.url}`}
+            key={forening.name}
           >
             <li className="room">
-              <p className="tittel">{room.fields.name}</p>
-              {room.fields.type && <p>{room.fields.type}</p>}
-              <p>Etasje: {room.fields.floor}</p>
-              {room.fields.roomnumber && (
-                <p>Nummer: {room.fields.roomnumber}</p>
-              )}
+              {/* TODO: Add logos */}
+              <h2>{forening.fields.tittel}</h2>
+              <p>{forening.fields.subtext}</p>
             </li>
-          </Link>
+          </a>
         ))}
       </ul>
     </section>

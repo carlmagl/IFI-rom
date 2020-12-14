@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-*{
+* {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-body{
-  font-family: 'Inter', sans-serif;
-  color: #1d3557; 
+body {
+  font-family: "Inter", sans-serif;
+  color: #1d3557;
 }
 
 .App-logo {
@@ -17,7 +17,6 @@ body{
   pointer-events: none;
 }
 
-
-.Content{
+.Content {
   height: 90vh;
 }
