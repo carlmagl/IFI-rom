@@ -9,10 +9,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Floor1 from "./components/Floor/Floor1.js";
-import Floor2 from "./components/Floor/Floor2.js";
-import Floor3 from "./components/Floor/Floor3.js";
-
+import Floor from "./components/Floor/Floor.js";
 import Foreninger from "./components/Foreninger/Foreninger.js";
 import Map from "./components/Map/Map.js";
 import { ContentfulClient, ContentfulProvider } from "react-contentful";
@@ -32,14 +29,8 @@ function App() {
             <Route exact path="/">
               <Rooms />
             </Route>
-            <Route path="/1etasje/:roomnumber">
-              <Floor1 />
-            </Route>
-            <Route path="/2etasje/:roomnumber">
-              <Floor2 />
-            </Route>
-            <Route path="/3etasje/:roomnumber">
-              <Floor3 />
+            <Route path="/:floor/:roomnumber">
+              <Floor />
             </Route>
             <Route path="/kart">
               <Map />
