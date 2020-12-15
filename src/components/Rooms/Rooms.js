@@ -48,7 +48,7 @@ const Rooms = (props) => {
         {shownList.map((room) => (
           <Link
             className="roomLink"
-            to={`/${room.fields.floor}etasje/${room.fields.roomnumber}`}
+            to={`/${room.fields.floor}/${room.fields.roomnumber}`}
             key={room.fields.roomnumber}
           >
             <li className="room">
