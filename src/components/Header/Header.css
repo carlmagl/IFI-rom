@@ -9,12 +9,16 @@
 
 .logo {
   margin: 0 0 0 120px;
-
   min-height: 100%;
   min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin: 0;
+  }
 }
 
 .logoLink {
