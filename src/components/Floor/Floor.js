@@ -8,17 +8,13 @@ import { ReactComponent as Floor3 } from "./floor3.svg";
 import { ReactComponent as Floor1Mobile } from "./floor1-mobile.svg";
 import { ReactComponent as Floor2Mobile } from "./floor2-mobile.svg";
 import { ReactComponent as Floor3Mobile } from "./floor3-mobile.svg";
-import { useParams, useLocation, useHistory } from "react-router-dom";
+import { useParams, /* useLocation,  */ useHistory } from "react-router-dom";
 
 function Floor() {
-  const location = useLocation();
-  console.log(location.pathname);
+  /* const location = useLocation(); */
   let { floor, roomnumber } = useParams();
-  console.log("RoomNumber:", roomnumber);
   const history = useHistory();
-
   useEffect(() => {
-    console.log(window.innerWidth);
     if (roomnumber != null) {
       var element = document.getElementById(roomnumber);
       element.scrollIntoView({

@@ -22,7 +22,6 @@ const Foreninger = () => {
     return <p>Page does not exist.</p>;
   }
   const foreninger = data.items;
-  console.log(foreninger);
   const shownList = foreninger
     .filter((room) =>
       room.fields.tittel.toLowerCase().includes(input.toLowerCase())
