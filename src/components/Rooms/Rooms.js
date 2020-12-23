@@ -5,7 +5,6 @@ import { useContentful } from "react-contentful";
 
 const Rooms = (props) => {
   const [input, setInput] = useState("");
-  console.log("Input:", input);
   const { data, error, fetched, loading } = useContentful({
     contentType: "rooms",
   });
@@ -23,7 +22,6 @@ const Rooms = (props) => {
     return <p>Page does not exist.</p>;
   }
   const rooms = data.items;
-  console.log("Rooms:", rooms[0].fields);
   const shownList = rooms
     .filter(
       (room) =>
@@ -52,6 +50,7 @@ const Rooms = (props) => {
             key={room.fields.roomnumber}
           >
             <li className="room">
+              <i class="fas fa-map-marker-alt fa-lg positionLogo"></i>
               <p className="tittel">{room.fields.name}</p>
               {room.fields.type && <p>{room.fields.type}</p>}
               <p>Etasje: {room.fields.floor}</p>

@@ -7,7 +7,10 @@ function Footer() {
     <footer className="footer">
       <ul className="footerList">
         <li>
-          <p>CML </p>
+          <a href="https://github.com/carlmagl" className="list">
+            <p>Github -</p>
+            <i class="fab fa-github"></i>
+          </a>
         </li>
       </ul>
     </footer>
