@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed to netlify:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e4e462fb-cd0d-4ec5-9ace-311fec629f5e/deploy-status)](https://app.netlify.com/sites/ifi-rom/deploys)
 
