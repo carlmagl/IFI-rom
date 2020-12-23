@@ -10,10 +10,6 @@
   align-items: center;
 }
 
-.backButton {
-  margin: 40px 0;
-}
-
 .active {
   fill: red;
   animation-name: color;
@@ -35,4 +31,20 @@
 
 .nonactive {
   fill: #c4c4c4;
+}
+
+.contentHeader {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeFloor {
+  margin: 0 40px 0 40px;
+}
+
+.githubIcon {
+  margin: 20px;
 }

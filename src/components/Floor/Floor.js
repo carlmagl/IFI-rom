@@ -28,10 +28,11 @@ function Floor() {
 
   return (
     <>
-      <div className="backButton">
+      <div className="contentHeader">
         <Button
           variant="contained"
           color="default"
+          className="backButton"
           onClick={() => {
             history.push(`/`);
           }}
@@ -39,6 +40,7 @@ function Floor() {
         >
           Tilbake
         </Button>
+        <h2 className="activeFloor">{`${floor}.etasje`}</h2>
       </div>
       {window.innerWidth >= 600 && (
         <section className="main">

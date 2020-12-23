@@ -12,7 +12,7 @@ function Header() {
           <h1 className="logoText">IFI-rom</h1>
         </Link>
       </div>
-      <ul class="linkList">
+      <ul className="linkList">
         {/* <li className="listElement">
           <Link className="link" to="/foreninger">
             <i class="fas fa-graduation-cap fa-2x"></i>

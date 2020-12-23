@@ -8,8 +8,8 @@ function Footer() {
       <ul className="footerList">
         <li>
           <a href="https://github.com/carlmagl/IFI-rom" className="list">
-            <p>Github - </p>
-            <i class="fab fa-github"></i>
+            <p>Github</p>
+            <i class="fab fa-github fa-2x githubIcon"></i>
           </a>
         </li>
       </ul>
