@@ -1,7 +1,6 @@
 .footer {
   margin: 0;
   background-color: #bdb9af;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +17,5 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
+  margin: 100px;
 }
