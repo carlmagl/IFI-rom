@@ -13,14 +13,15 @@ function Header() {
         </Link>
       </div>
       <ul class="linkList">
-        <li className="listElement">
+        {/* <li className="listElement">
           <Link className="link" to="/foreninger">
+            <i class="fas fa-graduation-cap fa-2x"></i>
             <h1 className="logoText">Ressurser</h1>
           </Link>
-        </li>
+        </li> */}
         <li className="listElement">
           <Link className="link" to="/foreninger">
-            <i className="fas fa-users"></i>
+            <i className="fas fa-users fa-2x"></i>
             <h1 className="logoText">Foreninger</h1>
           </Link>
         </li>
