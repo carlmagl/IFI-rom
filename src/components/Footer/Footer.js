@@ -9,10 +9,17 @@ function Footer() {
         <li>
           <a href="https://github.com/carlmagl/IFI-rom" className="list">
             <p>Github</p>
-            <i class="fab fa-github fa-2x githubIcon"></i>
+            <i className="fab fa-github fa-2x githubIcon"></i>
           </a>
         </li>
       </ul>
+      <iframe
+        className="map"
+        title="IFI"
+        frameBorder="0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDynAF2lcz5z8bJmOEhHODVjAV2R7Tmbzo&q=Ole-Johan+Dahls+hus"
+        allowFullScreen
+      ></iframe>{" "}
     </footer>
   );
 }

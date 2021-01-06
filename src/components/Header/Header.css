@@ -42,7 +42,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.logoImage {
+  margin-right: 10px;
+}
 .logo:hover {
   background-color: #1d3557;
   border-radius: 4px;
@@ -51,6 +53,12 @@
   color: white;
 }
 .logo:hover .logoImage {
+  color: white;
+}
+.listElement:hover .logoImage {
+  color: white;
+}
+.listElement:hover .logoText {
   color: white;
 }
 
@@ -72,4 +80,36 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .linkList {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1d3557;
+  }
+}
+.menuButton {
+  z-index: 101;
+  margin-right: 10px !important;
+}
+@media only screen and (min-width: 900px) {
+  .menuButton {
+    display: none !important;
+  }
+}
+
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  color: white;
+}
+.white {
+  color: white;
 }

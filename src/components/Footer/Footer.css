@@ -6,6 +6,11 @@
   align-items: center;
   color: #1d3557;
 }
+@media only screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+}
 
 .footerList {
   list-style: none;
@@ -18,4 +23,19 @@
   text-decoration: none;
   color: inherit;
   margin: 100px;
+}
+.map {
+  margin-bottom: 50px;
+  width: 90%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 900px) {
+  .map {
+    position: absolute;
+    right: 0;
+    width: 450px;
+    height: 200px;
+    margin-right: 50px;
+  }
 }
