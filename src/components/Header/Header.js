@@ -38,7 +38,7 @@ function Header() {
               if (window.innerWidth < 900) setOpen(!open);
             }}
           >
-            <i className="fas fa-users fa-2x logoImage"></i>
+            <i className="fas fa-users  logoImage"></i>
             <h1 className={open ? "white logoText" : "logoText"}>Foreninger</h1>
           </Link>
         </li>
