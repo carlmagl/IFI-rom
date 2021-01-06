@@ -38,6 +38,12 @@ function App() {
             <Route path="/foreninger">
               <Foreninger />
             </Route>
+            <Route path="/kollektivt">
+              <embed
+                src="https://mon.ruter.no/departures/59.943756-10.721023"
+                className="ruter"
+              />
+            </Route>
             <Redirect to="/" />
           </Switch>
           <Footer />
