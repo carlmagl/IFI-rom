@@ -22,7 +22,8 @@ function Header() {
             className="link"
             to="/kollektivt"
             onClick={() => {
-              setOpen(!open);
+              console.log(window.innerWidth < 900);
+              if (window.innerWidth < 900) setOpen(!open);
             }}
           >
             <CommuteIcon size="fa-2x" className="logoImage" />
@@ -34,7 +35,7 @@ function Header() {
             className="link"
             to="/foreninger"
             onClick={() => {
-              setOpen(!open);
+              if (window.innerWidth < 900) setOpen(!open);
             }}
           >
             <i className="fas fa-users fa-2x logoImage"></i>
