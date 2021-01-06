@@ -13,13 +13,13 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <iframe
+      {/* <iframe
         className="map"
         title="IFI"
         frameBorder="0"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDynAF2lcz5z8bJmOEhHODVjAV2R7Tmbzo&q=Ole-Johan+Dahls+hus"
+        src="https://www.google.com/maps/embed/v1/place?key=&q=Ole-Johan+Dahls+hus"
         allowFullScreen
-      ></iframe>{" "}
+      ></iframe>{" "} */}
     </footer>
   );
 }
