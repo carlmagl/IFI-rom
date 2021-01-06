@@ -34,6 +34,11 @@
   width: 100%;
   padding: 100px 0;
 }
+@media only screen and (max-width: 600px) {
+  .input {
+    padding: 60px 0 20px 0;
+  }
+}
 
 .inputField {
   width: 40%;
@@ -43,10 +48,13 @@
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #f0efe2;
+  font-size: 24px;
 }
 @media only screen and (max-width: 600px) {
   .inputField {
     width: 80%;
+    padding: 20px 28px;
+    font-size: 20px;
   }
 }
 
