@@ -34,7 +34,7 @@
   width: 100%;
   padding: 100px 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .input {
     padding: 60px 0 20px 0;
   }
@@ -50,7 +50,7 @@
   background-color: #f0efe2;
   font-size: 24px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .inputField {
     width: 80%;
     padding: 20px 28px;
@@ -91,4 +91,13 @@
 .weatherSymbol {
   width: 60px;
   margin: 10px;
+}
+
+.tempText {
+  font-size: 26px;
+}
+@media only screen and (max-width: 900px) {
+  .tempText {
+    font-size: 20px;
+  }
 }

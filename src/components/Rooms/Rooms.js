@@ -20,14 +20,16 @@ const Rooms = (props) => {
       )
       .then(function (response) {
         // handle success
-        /* console.log(
-          response.data.properties.timeseries[0].data.instant.details
-            .air_temperature
+        console.log(
+          JSON.stringify(
+            response.data.properties.timeseries[0].data.instant.details
+              .air_temperature
+          )
         );
         console.log(
           response.data.properties.timeseries[0].data.next_1_hours.summary
             .symbol_code
-        ); */
+        );
         setTemperature(
           response.data.properties.timeseries[0].data.instant.details
             .air_temperature
@@ -76,7 +78,12 @@ const Rooms = (props) => {
   return (
     <section className="mainContent">
       <div className="weather">
-        {temperature && temperature + "\u00B0"}
+        {temperature && (
+          <>
+            <p className="tempText">{temperature}</p>
+            <p className="tempText">{"\u00B0"}</p>
+          </>
+        )}
         {tempSymbol && (
           <img
             className="weatherSymbol"
