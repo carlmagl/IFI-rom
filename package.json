@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "int-test": "start-server-and-test react-scripts http://localhost:3000 cypress-run",
-    "cypress-run": "cypress run"
+    "cypress-run": "wait-on http://localhost:3000 cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
