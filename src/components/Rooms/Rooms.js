@@ -3,6 +3,7 @@ import "./Rooms.css";
 import { Link } from "react-router-dom";
 import { useContentful } from "react-contentful";
 import axios from "axios";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 const Rooms = (props) => {
   useEffect(() => {
@@ -19,17 +20,6 @@ const Rooms = (props) => {
         config
       )
       .then(function (response) {
-        // handle success
-        console.log(
-          JSON.stringify(
-            response.data.properties.timeseries[0].data.instant.details
-              .air_temperature
-          )
-        );
-        console.log(
-          response.data.properties.timeseries[0].data.next_1_hours.summary
-            .symbol_code
-        );
         setTemperature(
           response.data.properties.timeseries[0].data.instant.details
             .air_temperature
@@ -55,7 +45,12 @@ const Rooms = (props) => {
   const [tempSymbol, setTempSymbol] = useState();
 
   if (loading || !fetched) {
-    return null;
+    return (
+      <section className="loading">
+        <ScaleLoader color="#457b9d" />
+        <p>Loading data</p>;
+      </section>
+    );
   }
 
   if (error) {
@@ -102,7 +97,7 @@ const Rooms = (props) => {
           }}
         />
       </div>
-      <ul className="liste">
+      <ul className="liste" datatype-cy="rooms">
         {shownList.map((room) => (
           <Link
             className="roomLink"
