@@ -1,5 +1,8 @@
 .mainContent {
-  min-height: 60vh;
+  min-height: calc(100vh - 70px);
+  min-height: -o-calc(100% - 70px); /* opera */
+  min-height: -webkit-calc(100% - 70px); /* google, safari */
+  min-height: -moz-calc(100% - 70px); /* firefox */
   position: relative;
   box-sizing: content-box;
 }
@@ -47,7 +50,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #f0efe2;
+  background-color: #ffff;
   font-size: 24px;
 }
 @media only screen and (max-width: 900px) {
@@ -99,5 +102,32 @@
 @media only screen and (max-width: 900px) {
   .tempText {
     font-size: 20px;
+  }
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 332px);
+  min-height: -o-calc(100vh - 332px); /* opera */
+  min-height: -webkit-calc(100vh- 332px); /* google, safari */
+  min-height: -moz-calc(100vh- 332px); /* firefox */
+}
+
+.map {
+  margin-bottom: 50px;
+  width: 90%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 900px) {
+  .map {
+    position: absolute;
+    right: 0;
+    width: 450px;
+    height: 200px;
+    margin-right: 50px;
   }
 }

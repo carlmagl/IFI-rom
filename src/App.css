@@ -1,25 +1,21 @@
-.App {
-  text-align: center;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
+.App {
+  text-align: center;
+  min-height: calc(100vh - 60px);
+  min-height: -o-calc(100vh - 60px); /* opera */
+  min-height: -webkit-calc(100vh- 60px); /* google, safari */
+  min-height: -moz-calc(100vh- 60px); /* firefox */
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: #1d3557;
-  background-color: #f0efe2;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.Content {
-  height: 90vh;
+  /* background-color: #f0efe2; */
+  background-color: #ffffff;
 }
 
 .ruter {
