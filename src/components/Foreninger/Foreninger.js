@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import "./Rooms.css";
 import { useContentful } from "react-contentful";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Foreninger = () => {
   const [input, setInput] = useState("");
-
-  //TODO: Uncomment when contentfull is implemented
   const { data, error, fetched, loading } = useContentful({
     contentType: "foreninger",
   });
+
   if (loading || !fetched) {
-    return null;
+    return (
+      <section className="loading">
+        <PropagateLoader color="#457b9d" />
+        <p className="loadingText">Loading data</p>
+      </section>
+    );
   }
 
   if (error) {

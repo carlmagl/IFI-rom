@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Rooms.css";
+import "../Rooms/Rooms.css";
 import { Link } from "react-router-dom";
 import { useContentful } from "react-contentful";
 import axios from "axios";
@@ -48,7 +48,7 @@ const Rooms = (props) => {
     return (
       <section className="loading">
         <ScaleLoader color="#457b9d" />
-        <p>Loading data</p>;
+        <p className="loadingText">Loading data</p>
       </section>
     );
   }
