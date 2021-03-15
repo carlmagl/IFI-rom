@@ -116,6 +116,10 @@
   min-height: -moz-calc(100vh- 332px); /* firefox */
 }
 
+.loadingText {
+  margin-top: 50px;
+}
+
 .map {
   margin-bottom: 50px;
   width: 90%;
