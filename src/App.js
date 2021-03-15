@@ -15,8 +15,8 @@ import Map from "./components/Map/Map.js";
 import { ContentfulClient, ContentfulProvider } from "react-contentful";
 
 const contentfulClient = new ContentfulClient({
-  space: "6snc2jafxeoe",
-  accessToken: "c04HbEMiIdY4Avdiqar0FvPkxwD-H_uCsb1NoVUnaAI",
+  space: process.env.REACT_APP_SPACE,
+  accessToken: process.env.REACT_APP_ACCESSTOKEN,
 });
 
 function App() {
