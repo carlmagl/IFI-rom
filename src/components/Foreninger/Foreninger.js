@@ -13,7 +13,7 @@ const Foreninger = () => {
     return (
       <section className="loading">
         <PropagateLoader color="#457b9d" />
-        <p className="loadingText">Loading data</p>
+        <p className="loadingText">Loading data...</p>
       </section>
     );
   }
