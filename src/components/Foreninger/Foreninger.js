@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Rooms.css";
+import "./Foreninger.css";
 import { useContentful } from "react-contentful";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
@@ -33,11 +33,11 @@ const Foreninger = () => {
     )
     .sort((a, b) => a.fields.tittel.localeCompare(b.fields.tittel));
   return (
-    <section className="mainContent">
+    <section className="foreningContent">
       <div className="input">
         <input
           type="text"
-          className="inputField"
+          className="foreningInput"
           placeholder="Søk på navn"
           onChange={(e) => {
             setInput(e.target.value);
@@ -47,13 +47,13 @@ const Foreninger = () => {
       <ul className="liste">
         {shownList.map((forening) => (
           <a
-            className="roomLink"
+            className="foreningLink"
             target="_blank"
             rel="noreferrer"
             href={`${forening.fields.url}`}
             key={forening.name}
           >
-            <li className="room">
+            <li className="forening">
               {/* TODO: Add logos */}
               <h2>{forening.fields.tittel}</h2>
               <p>{forening.fields.subtext}</p>

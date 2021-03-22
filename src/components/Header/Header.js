@@ -6,10 +6,10 @@ import CommuteIcon from "@material-ui/icons/Commute";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
-function Header() {
+function Header({ color = "primary" }) {
   const [open, setOpen] = useState(false);
   return (
-    <header className="header">
+    <header className={`header ${color}`}>
       <div className="logo">
         <Link className="logoHome" to="/">
           <HomeWorkRoundedIcon className="logoImage" />
@@ -22,7 +22,6 @@ function Header() {
             className="link"
             to="/kollektivt"
             onClick={() => {
-              console.log(window.innerWidth < 900);
               if (window.innerWidth < 900) setOpen(!open);
             }}
           >
