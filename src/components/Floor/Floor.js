@@ -8,10 +8,9 @@ import { ReactComponent as Floor3 } from "./floor3.svg";
 import { ReactComponent as Floor1Mobile } from "./floor1-mobile.svg";
 import { ReactComponent as Floor2Mobile } from "./floor2-mobile.svg";
 import { ReactComponent as Floor3Mobile } from "./floor3-mobile.svg";
-import { useParams, /* useLocation,  */ useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 function Floor() {
-  /* const location = useLocation(); */
   let { floor, roomnumber } = useParams();
   const history = useHistory();
   useEffect(() => {
@@ -27,19 +26,19 @@ function Floor() {
   });
 
   return (
-    <>
+    <div className="floorContainer">
+      <Button
+        variant="contained"
+        color="default"
+        className="backButton"
+        onClick={() => {
+          history.push(`/`);
+        }}
+        startIcon={<ArrowBackIcon />}
+      >
+        Tilbake
+      </Button>
       <div className="contentHeader">
-        <Button
-          variant="contained"
-          color="default"
-          className="backButton"
-          onClick={() => {
-            history.push(`/`);
-          }}
-          startIcon={<ArrowBackIcon />}
-        >
-          Tilbake
-        </Button>
         <h2 className="activeFloor">{`${floor}.etasje`}</h2>
       </div>
       {window.innerWidth >= 600 && (
@@ -73,7 +72,7 @@ function Floor() {
           )}
         </section>
       )}
-    </>
+    </div>
   );
 }
 
