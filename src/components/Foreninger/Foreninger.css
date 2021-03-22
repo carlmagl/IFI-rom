@@ -58,10 +58,18 @@
   box-sizing: border-box;
   background: linear-gradient(
     to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  font-size: 24px;
+}
+.foreningInput:focus-within,
+.foreningInput:hover {
+  background: linear-gradient(
+    to right bottom,
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0.2)
   );
-  font-size: 24px;
 }
 @media only screen and (max-width: 900px) {
   .foreningInput {
