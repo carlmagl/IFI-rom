@@ -77,12 +77,6 @@
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 600px) {
-  .logo:hover {
-    background-color: #1d3557;
-    border-radius: 4px;
-  }
-}
 
 .logoText:hover {
   color: white;
