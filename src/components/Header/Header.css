@@ -1,10 +1,17 @@
 .header {
   overflow: hidden;
-  background-color: #457b9d;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.primary {
+  background-color: #457b9d;
+}
+
+.secondary {
+  background-color: #457b9d;
 }
 
 .logo {
@@ -29,9 +36,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .listElement {
   margin: 0 40px;
 }
+
 .link {
   text-decoration: none;
   color: #1d3557;
@@ -42,6 +51,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .logoImage {
   margin-right: 10px;
 }
