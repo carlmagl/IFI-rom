@@ -28,3 +28,17 @@ body {
     height: 95vh;
   }
 }
+
+.cantine {
+  width: 100%;
+  height: 83vh;
+}
+.inner-spisested{
+  color: "#1d3557"
+}
+
+@media only screen and (max-width: 800px) {
+  .cantine {
+    height: 95vh;
+  }
+}
