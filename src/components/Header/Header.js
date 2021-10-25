@@ -21,6 +21,18 @@ function Header({ color = "primary" }) {
         <li className="listElement">
           <Link
             className="link"
+            to="/kantine"
+            onClick={() => {
+              if (window.innerWidth < 900) setOpen(!open);
+            }}
+          >
+            <CommuteIcon size="fa-2x" className="logoImage" />
+            <h1 className={open ? "white logoText" : "logoText"}>Kollektivt</h1>
+          </Link>
+        </li>
+        <li className="listElement">
+          <Link
+            className="link"
             to="/kollektivt"
             onClick={() => {
               if (window.innerWidth < 900) setOpen(!open);
