@@ -3,6 +3,7 @@ import "./Header.css";
 import HomeWorkRoundedIcon from "@material-ui/icons/HomeWorkRounded";
 import { Link } from "react-router-dom";
 import CommuteIcon from "@material-ui/icons/Commute";
+import EmojiFoodBeverage from "@material-ui/icons/EmojiFoodBeverage";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
@@ -18,6 +19,18 @@ function Header({ color = "primary" }) {
         </Link>
       </div>
       <ul className={open ? "open linkList" : "linkList"}>
+        <li className="listElement">
+          <Link
+            className="link"
+            to="/kantine"
+            onClick={() => {
+              if (window.innerWidth < 900) setOpen(!open);
+            }}
+          >
+            <EmojiFoodBeverage size="fa-2x" className="logoImage" />
+            <h1 className={open ? "white logoText" : "logoText"}>Kantine</h1>
+          </Link>
+        </li>
         <li className="listElement">
           <Link
             className="link"
