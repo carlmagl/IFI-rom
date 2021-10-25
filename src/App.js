@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Floor from "./components/Floor/Floor.js";
 import Foreninger from "./components/Foreninger/Foreninger.js";
+import { Cantine } from "./components/Cantine/Cantine.js";
 import Map from "./components/Map/Map.js";
 import { ContentfulClient, ContentfulProvider } from "react-contentful";
 
@@ -29,16 +30,19 @@ function App() {
             <Route exact path="/">
               <Rooms />
             </Route>
-            <Route path="/:floor/:roomnumber">
+            <Route exact path="/:floor/:roomnumber">
               <Floor />
             </Route>
-            <Route path="/kart">
+            <Route exact path="/kart">
               <Map />
             </Route>
-            <Route path="/foreninger">
+            <Route exact path="/foreninger">
               <Foreninger />
             </Route>
-            <Route path="/kollektivt">
+            <Route exact path="/kantine">
+              <Cantine />
+            </Route>
+            <Route exact path="/kollektivt">
               <embed
                 src="https://mon.ruter.no/departures/59.943756-10.721023"
                 className="ruter"
