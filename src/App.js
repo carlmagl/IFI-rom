@@ -30,19 +30,19 @@ function App() {
             <Route exact path="/">
               <Rooms />
             </Route>
-            <Route path="/:floor/:roomnumber">
+            <Route exact path="/:floor/:roomnumber">
               <Floor />
             </Route>
-            <Route path="/kart">
+            <Route exact path="/kart">
               <Map />
             </Route>
-            <Route path="/foreninger">
+            <Route exact path="/foreninger">
               <Foreninger />
             </Route>
-            <Route path="/kantine">
+            <Route exact path="/kantine">
               <Cantine />
             </Route>
-            <Route path="/kollektivt">
+            <Route exact path="/kollektivt">
               <embed
                 src="https://mon.ruter.no/departures/59.943756-10.721023"
                 className="ruter"
