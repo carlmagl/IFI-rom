@@ -1,0 +1,37 @@
+.eventContent {
+  min-height: calc(100vh - 60px);
+  min-height: -o-calc(100vh - 60px); /* opera */
+  min-height: -webkit-calc(100vh- 60px); /* google, safari */
+  min-height: -moz-calc(100vh- 60px); /* firefox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventList {
+  min-height: 100%;
+  list-style: none;
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.event {
+  display: block;
+  width: 600px;
+}
+
+.eventLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  margin: 20px;
+  border: olive solid 2px;
+  border-radius: 2rem;
+}

@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
 import Rooms from "./components/Rooms/Rooms.js";
+import Events from "./components/Events/Events.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/foreninger">
               <Foreninger />
+            </Route>
+            <Route path="/eventer">
+              <Events />
             </Route>
             <Route path="/kollektivt">
               <embed
