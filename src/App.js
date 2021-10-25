@@ -40,7 +40,10 @@ function App() {
               <Foreninger />
             </Route>
             <Route exact path="/kantine">
-              <Cantine />
+            <embed
+                src="https://www.sio.no/mat-og-drikke/_window/mat+og+drikke+-+dagens+middag?s=284"
+                className="cantine"
+              />
             </Route>
             <Route exact path="/kollektivt">
               <embed
