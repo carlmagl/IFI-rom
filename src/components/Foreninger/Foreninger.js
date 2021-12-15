@@ -24,8 +24,9 @@ const Foreninger = () => {
   }
 
   if (!data) {
-    return <p>Page does not exist.</p>;
+    return <p>Could not find the page you are looking for.</p>;
   }
+
   const foreninger = data.items;
   const shownList = foreninger
     .filter((room) =>
