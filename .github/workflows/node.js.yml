@@ -7,6 +7,9 @@ env:
   REACT_APP_SPACE: ${{secrets.REACT_APP_SPACE}}
   REACT_APP_ACCESSTOKEN: ${{secrets.REACT_APP_ACCESSTOKEN}}
 
+before_scripts: 
+  - echo: "REACT_APP_SPACE: = ${{secrets.REACT_APP_SPACE}}"
+  - echo: "REACT_APP_ACCESSTOKEN: = ${{secrets.REACT_APP_ACCESSTOKEN}}"
 on:
   push:
     branches: [master]
