@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import "./Floor.css";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import Button from "@material-ui/core/Button";
-import { ReactComponent as Floor1 } from "./floor1.svg";
-import { ReactComponent as Floor2 } from "./floor2.svg";
-import { ReactComponent as Floor3 } from "./floor3.svg";
-import { ReactComponent as Floor1Mobile } from "./floor1-mobile.svg";
-import { ReactComponent as Floor2Mobile } from "./floor2-mobile.svg";
-import { ReactComponent as Floor3Mobile } from "./floor3-mobile.svg";
-import { useParams, useHistory } from "react-router-dom";
+import React, { useEffect } from 'react';
+import './Floor.css';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Button from '@material-ui/core/Button';
+import { useParams, useHistory } from 'react-router-dom';
+import { ReactComponent as Floor1 } from './floor1.svg';
+import { ReactComponent as Floor2 } from './floor2.svg';
+import { ReactComponent as Floor3 } from './floor3.svg';
+import { ReactComponent as Floor1Mobile } from './floor1-mobile.svg';
+import { ReactComponent as Floor2Mobile } from './floor2-mobile.svg';
+import { ReactComponent as Floor3Mobile } from './floor3-mobile.svg';
 
 function Floor() {
-  let { floor, roomnumber } = useParams();
+  const { floor, roomnumber } = useParams();
   const history = useHistory();
   useEffect(() => {
     if (roomnumber != null) {
-      var element = document.getElementById(roomnumber);
+      const element = document.getElementById(roomnumber);
       element.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "center",
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'center',
       });
-      element.classList.add("active");
+      element.classList.add('active');
     }
   });
 
@@ -32,7 +32,7 @@ function Floor() {
         color="default"
         className="backButton"
         onClick={() => {
-          history.push(`/`);
+          history.push('/');
         }}
         startIcon={<ArrowBackIcon />}
       >
@@ -43,15 +43,15 @@ function Floor() {
       </div>
       {window.innerWidth >= 600 && (
         <section className="main">
-          {parseInt(floor) === 1 && (
+          {parseInt(floor, 10) === 1 && (
             <Floor1 height={window.innerHeight * 0.7} />
           )}
 
-          {parseInt(floor) === 2 && (
+          {parseInt(floor, 10) === 2 && (
             <Floor2 height={window.innerHeight * 0.7} />
           )}
 
-          {parseInt(floor) === 3 && (
+          {parseInt(floor, 10) === 3 && (
             <Floor3 height={window.innerHeight * 0.7} />
           )}
         </section>
@@ -59,15 +59,15 @@ function Floor() {
 
       {window.innerWidth < 600 && (
         <section className="main-mobile">
-          {parseInt(floor) === 1 && (
+          {parseInt(floor, 10) === 1 && (
             <Floor1Mobile width={window.innerWidth * 0.9} />
           )}
 
-          {parseInt(floor) === 2 && (
+          {parseInt(floor, 10) === 2 && (
             <Floor2Mobile width={window.innerWidth * 0.9} />
           )}
 
-          {parseInt(floor) === 3 && (
+          {parseInt(floor, 10) === 3 && (
             <Floor3Mobile width={window.innerWidth * 0.9} />
           )}
         </section>

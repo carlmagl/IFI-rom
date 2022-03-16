@@ -1,14 +1,14 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 function Footer() {
-  //TODO: Remake navbar
+  // TODO: Remake navbar
   return (
     <footer className="footer">
       <ul className="footerList">
         <li>
           <a href="https://github.com/carlmagl/IFI-rom" className="list">
-            <i className="fab fa-github fa-2x githubIcon"></i>
+            <i className="fab fa-github fa-2x githubIcon" />
           </a>
         </li>
       </ul>

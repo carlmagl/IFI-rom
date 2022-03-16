@@ -1,48 +1,38 @@
-import React, { useEffect, useState } from "react";
-import "../Rooms/Rooms.css";
-import { Link } from "react-router-dom";
-import { useContentful } from "react-contentful";
-import axios from "axios";
-import ScaleLoader from "react-spinners/ScaleLoader";
+import React, { useEffect, useState } from 'react';
+import './Rooms.css';
+import { Link } from 'react-router-dom';
+import { useContentful } from 'react-contentful';
+import axios from 'axios';
+import ScaleLoader from 'react-spinners/ScaleLoader';
 
-const Rooms = (props) => {
+function Rooms() {
+  const [temperature, setTemperature] = useState();
+  const [tempSymbol, setTempSymbol] = useState();
   useEffect(() => {
-    const lat = "59.94337241086495";
-    const long = "10.718350157512722";
+    const lat = '59.94337241086495';
+    const long = '10.718350157512722';
     const config = {
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
     };
     axios
-      .get(
-        `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${long}`,
-        config
-      )
-      .then(function (response) {
-        setTemperature(
-          response.data.properties.timeseries[0].data.instant.details
-            .air_temperature
-        );
-        setTempSymbol(
-          response.data.properties.timeseries[0].data.next_1_hours.summary
-            .symbol_code
-        );
+      .get(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${long}`, config)
+      .then((response) => {
+        setTemperature(response.data.properties.timeseries[0].data.instant.details.air_temperature);
+        setTempSymbol(response.data.properties.timeseries[0].data.next_1_hours.summary.symbol_code);
       })
-      .catch(function (error) {
+      .catch((error) => {
         // handle error
         console.log(error);
-      })
-      .then(function () {
-        // always executed
       });
   }, []);
-  const [input, setInput] = useState("");
-  const { data, error, fetched, loading } = useContentful({
-    contentType: "rooms",
+  const [input, setInput] = useState('');
+  const {
+    data, error, fetched, loading,
+  } = useContentful({
+    contentType: 'rooms',
   });
-  const [temperature, setTemperature] = useState();
-  const [tempSymbol, setTempSymbol] = useState();
 
   if (loading || !fetched) {
     return (
@@ -59,16 +49,13 @@ const Rooms = (props) => {
   }
 
   if (!data) {
-    return <p>Page does not exist.</p>;
+    return <p>Could not find the data you were looking for</p>;
   }
   const rooms = data.items;
   const shownList = rooms
-    .filter(
-      (room) =>
-        room.fields.name.toLowerCase().includes(input.toLowerCase()) ||
-        room.fields.roomnumber.includes(input) ||
-        room.fields.floor.includes(input)
-    )
+    .filter((room) => room.fields.name.toLowerCase().includes(input.toLowerCase())
+        || room.fields.roomnumber.includes(input)
+        || room.fields.floor.includes(input))
     .sort((a, b) => a.fields.name.localeCompare(b.fields.name));
   return (
     <section className="mainContent">
@@ -76,7 +63,7 @@ const Rooms = (props) => {
         {temperature && (
           <>
             <p className="tempText">{temperature}</p>
-            <p className="tempText">{"\u00B0"}</p>
+            <p className="tempText">{'\u00B0'}</p>
           </>
         )}
         {tempSymbol && (
@@ -105,12 +92,18 @@ const Rooms = (props) => {
             key={room.fields.roomnumber}
           >
             <li className="room">
-              <i className="fas fa-map-marker-alt fa-lg positionLogo"></i>
+              <i className="fas fa-map-marker-alt fa-lg positionLogo" />
               <p className="tittel">{room.fields.name}</p>
               {room.fields.type && <p>{room.fields.type}</p>}
-              <p>Etasje: {room.fields.floor}</p>
+              <p>
+                Etasje:
+                {room.fields.floor}
+              </p>
               {room.fields.roomnumber && (
-                <p>Nummer: {room.fields.roomnumber}</p>
+                <p>
+                  Nummer:
+                  {room.fields.roomnumber}
+                </p>
               )}
             </li>
           </Link>
@@ -118,6 +111,6 @@ const Rooms = (props) => {
       </ul>
     </section>
   );
-};
+}
 
 export default Rooms;

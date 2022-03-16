@@ -1,25 +1,25 @@
-import React from "react";
-import "./App.css";
-import Header from "./components/Header/Header.js";
-import Footer from "./components/Footer/Footer.js";
-import Rooms from "./components/Rooms/Rooms.js";
+import React from 'react';
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from "react-router-dom";
-import Floor from "./components/Floor/Floor.js";
-import Foreninger from "./components/Foreninger/Foreninger.js";
-import Map from "./components/Map/Map.js";
-import { ContentfulClient, ContentfulProvider } from "react-contentful";
+} from 'react-router-dom';
+import { ContentfulClient, ContentfulProvider } from 'react-contentful';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Rooms from './components/Rooms/Rooms';
+import Floor from './components/Floor/Floor';
+import Foreninger from './components/Foreninger/Foreninger';
+import Map from './components/Map/Map';
 
 const contentfulClient = new ContentfulClient({
   space: process.env.REACT_APP_SPACE,
   accessToken: process.env.REACT_APP_ACCESSTOKEN,
 });
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <ContentfulProvider client={contentfulClient}>
@@ -39,7 +39,7 @@ function App() {
               <Foreninger />
             </Route>
             <Route exact path="/kantine">
-            <embed
+              <embed
                 src="https://www.sio.no/mat-og-drikke/_window/mat+og+drikke+-+dagens+middag?s=284"
                 className="cantine"
               />
@@ -58,5 +58,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
