@@ -21,10 +21,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Main technologies:
 
--   Node
--   Express
--   Handlebars
--   less
+-   React
+-   Contentfull
 ## CMS
 This application uses contentfull as a content managment system. You need an account to acces the cms.
 ## Deploy
