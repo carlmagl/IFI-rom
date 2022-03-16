@@ -27,7 +27,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: echo "REACT_APP_ACCESSTOKEN = ${{secrets.REACT_APP_ACCESSTOKEN}}"
-      - run: echo "REACT_APP_SPACE = ${{secrets.REACT_APP_SPACE}}"
       - run: npm install
       - run: npm run int-test
