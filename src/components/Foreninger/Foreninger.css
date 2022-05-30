@@ -1,5 +1,8 @@
 .foreningContent {
-  min-height: 73vh;
+  min-height: calc(100vh - 332px);
+  min-height: -o-calc(100vh - 332px); /* opera */
+  min-height: -webkit-calc(100vh- 332px); /* google, safari */
+  min-height: -moz-calc(100vh- 332px); /* firefox */
   background-color: #457b9d;
 }
 

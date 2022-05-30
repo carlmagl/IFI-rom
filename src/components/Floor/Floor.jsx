@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import './Floor.css';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import Button from '@material-ui/core/Button';
-import { useParams, useHistory } from 'react-router-dom';
-import { ReactComponent as Floor1 } from './floor1.svg';
-import { ReactComponent as Floor2 } from './floor2.svg';
-import { ReactComponent as Floor3 } from './floor3.svg';
-import { ReactComponent as Floor1Mobile } from './floor1-mobile.svg';
-import { ReactComponent as Floor2Mobile } from './floor2-mobile.svg';
-import { ReactComponent as Floor3Mobile } from './floor3-mobile.svg';
+import React, { useEffect } from "react";
+import "./Floor.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Button from "@mui/material/Button";
+import { useParams, useHistory } from "react-router-dom";
+import { ReactComponent as Floor1 } from "./floor1.svg";
+import { ReactComponent as Floor2 } from "./floor2.svg";
+import { ReactComponent as Floor3 } from "./floor3.svg";
+import { ReactComponent as Floor1Mobile } from "./floor1-mobile.svg";
+import { ReactComponent as Floor2Mobile } from "./floor2-mobile.svg";
+import { ReactComponent as Floor3Mobile } from "./floor3-mobile.svg";
 
 function Floor() {
   const { floor, roomnumber } = useParams();
@@ -17,11 +17,11 @@ function Floor() {
     if (roomnumber != null) {
       const element = document.getElementById(roomnumber);
       element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-        inline: 'center',
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
       });
-      element.classList.add('active');
+      element.classList.add("active");
     }
   });
 
@@ -29,10 +29,10 @@ function Floor() {
     <div className="floorContainer">
       <Button
         variant="contained"
-        color="default"
         className="backButton"
+        sx={{ bgcolor: "#457b9d" }}
         onClick={() => {
-          history.push('/');
+          history.push("/");
         }}
         startIcon={<ArrowBackIcon />}
       >

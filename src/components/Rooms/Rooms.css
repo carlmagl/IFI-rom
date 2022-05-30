@@ -1,8 +1,8 @@
 .mainContent {
-  min-height: calc(100vh - 70px);
-  min-height: -o-calc(100% - 70px); /* opera */
-  min-height: -webkit-calc(100% - 70px); /* google, safari */
-  min-height: -moz-calc(100% - 70px); /* firefox */
+  min-height: calc(100vh - 332px);
+  min-height: -o-calc(100vh - 332px); /* opera */
+  min-height: -webkit-calc(100vh- 332px); /* google, safari */
+  min-height: -moz-calc(100vh- 332px); /* firefox */ /* firefox */
   position: relative;
   box-sizing: content-box;
 }
