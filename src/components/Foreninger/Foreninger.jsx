@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import './Foreninger.css';
-import { useContentful } from 'react-contentful';
-import PropagateLoader from 'react-spinners/PropagateLoader';
+import React, { useState } from "react";
+import "./Foreninger.css";
+import { useContentful } from "react-contentful";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function Foreninger() {
-  const [input, setInput] = useState('');
-  const {
-    data, error, fetched, loading,
-  } = useContentful({
-    contentType: 'foreninger',
+  const [input, setInput] = useState("");
+  const { data, error, fetched, loading } = useContentful({
+    contentType: "foreninger",
   });
 
   if (loading || !fetched) {
@@ -31,7 +29,9 @@ function Foreninger() {
 
   const foreninger = data.items;
   const shownList = foreninger
-    .filter((room) => room.fields.tittel.toLowerCase().includes(input.toLowerCase()))
+    .filter((room) =>
+      room.fields.tittel.toLowerCase().includes(input.toLowerCase())
+    )
     .sort((a, b) => a.fields.tittel.localeCompare(b.fields.tittel));
   return (
     <section className="foreningContent">
