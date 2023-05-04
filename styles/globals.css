@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  fill: red;
+  animation-name: color;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    fill: #c4c4c4;
+  }
+  50% {
+    fill: #457b9d;
+  }
+  100% {
+    fill: #c4c4c4;
+  }
+}

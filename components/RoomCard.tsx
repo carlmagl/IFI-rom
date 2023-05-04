@@ -10,7 +10,7 @@ export const RoomCard = ({ room }: { room: Room }) => {
       >
         <h2 className="text-xl">{room.fields.name}</h2>
         <div className="flex flex-col items-center">
-          <p>{room.fields.description}</p>
+          <p>{room.fields.type}</p>
           <p>{room.fields.floor}.etasje</p>
           <p>{room.fields.roomnumber}</p>
         </div>

@@ -1,7 +1,7 @@
 export interface Room {
   fields: {
     name: string;
-    description: string;
+    type: string;
     floor: string;
     roomnumber: string;
   };

@@ -2,8 +2,16 @@ import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { CONTENTFUL_BASE_URL } from "../constants";
 import { Room } from "../types/room";
-import Link from "next/link";
 import { ParsedUrlQuery } from "querystring";
+import { Floor1 } from "../components/Floors/floor1";
+import { Floor2 } from "../components/Floors/floor2";
+import { Floor3 } from "../components/Floors/floor3";
+import { Floor1Mobile } from "../components/Floors/floor1mobile";
+import { Floor2Mobile } from "../components/Floors/floor2mobile";
+import { Floor3Mobile } from "../components/Floors/floor3mobile";
+import { Header } from "../components/Header";
+import { useEffect } from "react";
+import Link from "next/link";
 
 interface IParams extends ParsedUrlQuery {
   name: string;
@@ -41,16 +49,64 @@ export const getStaticProps: GetStaticProps<{ room: Room }> = async (
   };
 };
 
-export default function Room({
+const floor = (room: Room) => {
+  switch (room.fields.floor) {
+    case "1":
+      return <Floor1 />;
+    case "2":
+      return <Floor2 />;
+    case "3":
+      return <Floor3 />;
+  }
+};
+
+const mobileFloor = (room: Room) => {
+  switch (room.fields.floor) {
+    case "1":
+      return <Floor1Mobile />;
+    case "2":
+      return <Floor2Mobile />;
+    case "3":
+      return <Floor3Mobile />;
+  }
+};
+
+export default function MapView({
   room,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(room);
+  useEffect(() => {
+    if (room.fields.roomnumber != null) {
+      const element = document.getElementById(room.fields.roomnumber);
+      if (element == null) return;
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+      element.classList.add("active");
+    }
+  });
   return (
-    <section>
-      <h1>{room.fields.name}</h1>
-      <p>{room.fields.description}</p>
-      <p>{room.fields.floor}</p>
-      <p>{room.fields.roomnumber}</p>
-    </section>
+    <Header title={`${room.fields.name} - IFI-rom`}>
+      <section className="min-h-full sm:h-screen flex flex-col justify-center relative">
+        <Link
+          href={"/"}
+          className="absolute top-5 right-5 bg-blue-dark h-[35px] w-[35px] text-white rounded-full flex justify-center items-center z-20"
+        >
+          X
+        </Link>
+        {/* <div className="flex flex-col gap-2 justify-center items-center p-5">
+          <h1 className="text-blue-dark text-2xl">{room.fields.name}</h1>
+          <div className="flex flex-col">
+            <p>{room.fields.type}</p>
+            <p>{room.fields.floor}</p>
+          </div>
+        </div> */}
+        <div className="hidden sm:block h-full relative overflow-scroll p-10 flex flex-col justify-center items-center">
+          {floor(room)}
+        </div>
+        <div className="sm:hidden p-10">{mobileFloor(room)}</div>
+      </section>
+    </Header>
   );
 }
