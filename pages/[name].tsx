@@ -10,7 +10,7 @@ import { Floor1Mobile } from "../components/Floors/floor1mobile";
 import { Floor2Mobile } from "../components/Floors/floor2mobile";
 import { Floor3Mobile } from "../components/Floors/floor3mobile";
 import { Header } from "../components/Header";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 interface IParams extends ParsedUrlQuery {

@@ -5,10 +5,10 @@ import {
   getStaticPropsRevalidationTime,
 } from "../constants";
 import { Room } from "../types/room";
-import Link from "next/link";
 import { useState } from "react";
 import { RoomCard } from "../components/RoomCard";
 import { Header } from "../components/Header";
+import Image from "next/image";
 
 export const getStaticProps: GetStaticProps<{
   rooms: Room[];
@@ -51,19 +51,23 @@ export default function Home({
   weather,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [searchValue, setSearchValue] = useState("");
-  console.log(weather);
-  console.log(
-    weather.properties.timeseries[0].data.next_1_hours.summary.symbol_code
-  );
+  const { air_temperature } =
+    weather?.properties?.timeseries[0]?.data?.instant?.details;
+  const weathericon =
+    weather.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
   return (
-    <Header title={"Hjem - IFI-rom"}>
-      <section className="flex flex-col justify-center items-center gap-4 py-20">
+    <Header title={"IFI-rom - Rom på Ole Johan Dahls hus"}>
+      <section className="flex flex-col justify-center items-center gap-4 py-20 relative">
+        <div className="flex items-center gap-2 absolute top-2 right-5">
+          <p>{air_temperature}</p>
+          <Image
+            src={`/weathericon/svg/${weathericon}.svg`}
+            alt={""}
+            width={40}
+            height={40}
+          />
+        </div>
         <h1 className="text-2xl font-bold text-center">Romoversikt</h1>
-        {
-          weather?.properties?.timeseries[0]?.data?.instant?.details
-            .air_temperature
-        }
-        {/* <Image></Image> */}
         <input
           type="text"
           value={searchValue}

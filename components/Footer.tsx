@@ -9,11 +9,11 @@ export const Footer = () => {
           <li>0373 Oslo</li>
         </dl>
         <p className="flex gap-2 items-center">
-          Feil, ris eller ros:
+          Har du forslag, funnet feil, ris eller ros:
           <a href="https://github.com/carlmagl/IFI-rom">
             <Image
               src="/github.svg"
-              alt="Vercel Logo"
+              alt="Github logo"
               className="color-blue-dark"
               width={20}
               height={20}
@@ -26,7 +26,7 @@ export const Footer = () => {
         <Image
           src="/ojd.svg"
           alt="Vercel Logo"
-          className="dark:invert"
+          className=""
           width={400}
           height={200}
           priority

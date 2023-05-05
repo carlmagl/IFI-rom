@@ -33,7 +33,6 @@ export default function Home({
     <Header title={"Foreninger - IFI-rom"}>
       <section className="py-20 flex flex-col gap-10">
         <h1 className="text-4xl font-bold text-center">Foreninger på IFI</h1>
-        <input type="text" />
         <ul className="flex flex-wrap justify-center gap-8">
           {foreninger
             .sort((a, b) => a.fields.tittel.localeCompare(b.fields.tittel))
