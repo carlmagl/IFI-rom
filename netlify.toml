@@ -1,5 +1,5 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish = ".next"
+  publish = "/opt/build/repo/.next"
   publishOrigin = "config"
