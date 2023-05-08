@@ -1,30 +1,37 @@
-# IFI-Rom
-## Deployed to netlify:
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e4e462fb-cd0d-4ec5-9ace-311fec629f5e/deploy-status)](https://app.netlify.com/sites/ifi-rom/deploys)
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+First, run the development server:
 
-## Start application
+```bash
+npm run dev
+```
 
-`npm start`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### `npm run build`
+## Learn More
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Main technologies:
 
--   React
--   Contentfull
+- React
+- Contentful
+
 ## CMS
-This application uses contentfull as a content managment system. You need an account to acces the cms.
+
+This application uses contentful as a content managment system. You need an account to acces the cms.
+
 ## Deploy
+
 This site is hosted on netlify and deploys automaticly when pushed to master:
--   [Master](https://www.ifirom.no/)
+
+- [Master](https://www.ifirom.no/)
