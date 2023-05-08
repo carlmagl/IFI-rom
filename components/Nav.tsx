@@ -9,12 +9,12 @@ export const Nav = () => {
   console.log(currentPath);
   return (
     <nav
-      className={`flex justify-between w-full h-[64px] bg-white text-blue-default px-10 border-b-2 border-gray-200 items-center`}
+      className={`flex justify-between w-full h-[64px] bg-white text-blue-default px-2 sm:px-10 border-b-2 border-gray-200 items-center`}
     >
       <Link href={"/"} className="flex items-center">
-        <h2>IFI-Rom</h2>
+        <h2 className="text-xl font-semibold hover:text-red">IFI-Rom</h2>
       </Link>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 sm:gap-5">
         {navLinks.map((navLink) => (
           <a
             href={navLink.href}

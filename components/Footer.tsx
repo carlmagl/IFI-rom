@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GITHUB_IFI_ROM } from "../constants";
 
 export const Footer = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer = () => {
         </dl>
         <p className="flex gap-2 items-center">
           Har du forslag, funnet feil, ris eller ros:
-          <a href="https://github.com/carlmagl/IFI-rom">
+          <a href={GITHUB_IFI_ROM} target="_blank">
             <Image
               src="/github.svg"
               alt="Github logo"
@@ -25,7 +26,7 @@ export const Footer = () => {
       <div className="">
         <Image
           src="/ojd.svg"
-          alt="Vercel Logo"
+          alt="SVG of ole johan dahls hus"
           className=""
           width={400}
           height={200}

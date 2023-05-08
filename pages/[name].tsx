@@ -91,7 +91,7 @@ export default function MapView({
       <section className="min-h-full sm:h-screen flex flex-col justify-center relative">
         <Link
           href={"/"}
-          className="absolute top-5 right-5 bg-blue-dark h-[35px] w-[35px] text-white rounded-full flex justify-center items-center z-20"
+          className="absolute top-5 right-5 bg-blue-dark h-[35px] w-[35px] text-white rounded-full flex justify-center items-center z-20 hover:bg-blue-default"
         >
           X
         </Link>
@@ -102,10 +102,13 @@ export default function MapView({
             <p>{room.fields.floor}</p>
           </div>
         </div> */}
-        <div className="hidden sm:block h-full relative overflow-scroll p-10 flex flex-col justify-center items-center">
-          {floor(room)}
-        </div>
-        <div className="sm:hidden p-10">{mobileFloor(room)}</div>
+        {typeof window !== "undefined" && window.innerHeight > 680 ? (
+          <div className="h-full relative overflow-scroll p-10 flex flex-col justify-center items-center">
+            {floor(room)}
+          </div>
+        ) : (
+          <div className="p-10">{mobileFloor(room)}</div>
+        )}
       </section>
     </Header>
   );
