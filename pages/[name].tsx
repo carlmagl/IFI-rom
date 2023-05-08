@@ -88,27 +88,18 @@ export default function MapView({
   });
   return (
     <Header title={`${room.fields.name} - IFI-rom`}>
-      <section className="min-h-full sm:h-screen flex flex-col justify-center relative">
+      <section className="min-h-ful flex flex-col justify-center items-center relative">
         <Link
           href={"/"}
-          className="absolute top-5 right-5 bg-blue-dark h-[35px] w-[35px] text-white rounded-full flex justify-center items-center z-20 hover:bg-blue-default"
+          className="absolute top-5 right-5 bg-purple h-[35px] w-[35px] text-white rounded-full flex justify-center items-center z-20 hover:bg-blue-default"
         >
           X
         </Link>
-        {/* <div className="flex flex-col gap-2 justify-center items-center p-5">
-          <h1 className="text-blue-dark text-2xl">{room.fields.name}</h1>
-          <div className="flex flex-col">
-            <p>{room.fields.type}</p>
-            <p>{room.fields.floor}</p>
-          </div>
-        </div> */}
-        {typeof window !== "undefined" && window.innerHeight > 680 ? (
-          <div className="h-full relative overflow-scroll p-10 flex flex-col justify-center items-center">
-            {floor(room)}
-          </div>
-        ) : (
-          <div className="p-10">{mobileFloor(room)}</div>
-        )}
+        <div className="flex flex-col gap-2 justify-center items-center p-5 text-blue">
+          <h1 className="text-2xl font-bold">{room.fields.name}</h1>
+          <p>{room.fields.floor} .etasje</p>
+        </div>
+        <div className="p-10 w-full sm:w-[80%] h-full">{mobileFloor(room)}</div>
       </section>
     </Header>
   );

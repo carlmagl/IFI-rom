@@ -32,7 +32,9 @@ export default function Home({
   return (
     <Header title={"Foreninger - IFI-rom"}>
       <section className="py-20 flex flex-col gap-10">
-        <h1 className="text-4xl font-bold text-center">Foreninger på IFI</h1>
+        <h1 className="text-2xl font-bold text-center text-purple">
+          Foreninger på IFI
+        </h1>
         <ul className="flex flex-wrap justify-center gap-8">
           {foreninger
             .sort((a, b) => a.fields.tittel.localeCompare(b.fields.tittel))
@@ -40,10 +42,11 @@ export default function Home({
               <ForeningCard forening={forening} key={forening.sys.id} />
             ))}
         </ul>
-        <p className="text-center">
-          Savner du din forening her, lag et issue i{" "}
+        <p className="text-center p-5 text-sm">
+          Savner du din forening, eller vil ha endring i teksten som står her,
+          lag et issue i{" "}
           <a
-            className="text-red underline underline-offset-2"
+            className="text-purple underline underline-offset-2"
             href={GITHUB_IFI_ROM}
           >
             Github

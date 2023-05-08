@@ -2,6 +2,9 @@ import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import {
   CONTENTFUL_BASE_URL,
+  IFI_LAT,
+  IFI_LONG,
+  YR_BASE_URL,
   getStaticPropsRevalidationTime,
 } from "../constants";
 import { Room } from "../types/room";
@@ -19,15 +22,14 @@ export const getStaticProps: GetStaticProps<{
   );
   const rooms = roomsResponse.data.items;
 
-  const LAT = "59.9145";
-  const LONG = "10.7499";
   const headers = new Headers({
     Accept: "application/json",
     "Content-Type": "application/json",
-    "User-Agent": "Fink tv Testing",
+    "User-Agent": "IFI-rom",
   });
+
   const weatherResponse = await fetch(
-    `https://api.met.no/weatherapi/nowcast/2.0/complete?altitude=55&lat=${LAT}&lon=${LONG}`,
+    `${YR_BASE_URL}?altitude=55&lat=${IFI_LAT}&lon=${IFI_LONG}`,
     {
       method: "GET",
       headers,
@@ -36,7 +38,6 @@ export const getStaticProps: GetStaticProps<{
 
   const weather = await weatherResponse.json();
 
-  console.log(weather);
   return {
     props: {
       rooms,
@@ -67,7 +68,9 @@ export default function Home({
             height={40}
           />
         </div>
-        <h1 className="text-2xl font-bold text-center">Romoversikt</h1>
+        <h1 className="text-purple text-2xl font-bold text-center">
+          Romoversikt
+        </h1>
         <input
           type="text"
           value={searchValue}

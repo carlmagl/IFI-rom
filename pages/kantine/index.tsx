@@ -42,11 +42,13 @@ export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
 export default function Kantine({
   meals,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(meals);
   return (
-    <Header title={"Kantine - IFI-rom"}>
-      <section className="py-20 flex flex-col gap-5">
-        <h1 className="text-2xl font-bold text-center">Ukesplan</h1>
+    <Header
+      title="Kantine - IFI-rom"
+      description="Her kan du se hva som serveres ved kantina i Ole Johan Dahls hus."
+    >
+      <section className="py-10 sm:py-20 flex flex-col gap-5">
+        <h1 className="text-2xl text-purple font-bold text-center">Ukesplan</h1>
         <ul className="flex flex-col items-center flex-wrap gap-4">
           {meals.map((meal, index) => (
             <MealCard meal={meal} key={meal.day} index={index} />
