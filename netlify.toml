@@ -1,3 +1,10 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  commandOrigin: config
+  environment:
+    - CONTENTFUL_ACCESS_TOKEN
+    - CONTENTFUL_SPACE_ID
+    - REACT_APP_ACCESSTOKEN
+    - REACT_APP_SPACE
+  publish: /opt/build/repo/.next
+  publishOrigin: config
