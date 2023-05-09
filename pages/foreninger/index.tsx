@@ -27,7 +27,6 @@ export const getStaticProps: GetStaticProps<{
 export default function Home({
   foreninger,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(foreninger);
   return (
     <Header title={"Foreninger - IFI-rom"}>
       <section className="py-20 flex flex-col gap-10">

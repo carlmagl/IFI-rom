@@ -16,7 +16,7 @@ export const navLinks: readonly { label: string; href: string }[] = [
 ];
 
 // export const getStaticPropsRevalidationTime = 3600; // 1 hour
-export const getStaticPropsRevalidationTime = 300; // 5 minutes
+export const getStaticPropsRevalidationTime = 60; // 5 minutesa
 
 export const IFI_LAT = "59.9145";
 export const IFI_LONG = "10.7499";
