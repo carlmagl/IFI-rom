@@ -2,9 +2,9 @@ import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { SIO_BASE_URL, getStaticPropsRevalidationTime } from "../../constants";
 import * as cheerio from "cheerio";
-import { Meal } from "../../types/meal";
 import { MealCard } from "../../components/MealCard";
 import { Header } from "../../components/Header";
+import { Meal } from "@/utils/types/meal";
 
 export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
   const days = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"];

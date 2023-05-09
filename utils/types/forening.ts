@@ -1,4 +1,4 @@
-interface Forening {
+export interface Forening {
   fields: {
     tittel: string;
     subtext: string;

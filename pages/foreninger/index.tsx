@@ -1,7 +1,5 @@
 import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Link from "next/link";
-import { Room } from "../../types/room";
 import {
   CONTENTFUL_BASE_URL,
   GITHUB_IFI_ROM,
@@ -9,6 +7,7 @@ import {
 } from "../../constants";
 import { ForeningCard } from "../../components/ForeningCard";
 import { Header } from "../../components/Header";
+import { Forening } from "@/utils/types/forening";
 
 export const getStaticProps: GetStaticProps<{
   foreninger: Forening[];

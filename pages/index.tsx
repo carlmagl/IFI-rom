@@ -7,11 +7,11 @@ import {
   YR_BASE_URL,
   getStaticPropsRevalidationTime,
 } from "../constants";
-import { Room } from "../types/room";
 import { useState } from "react";
 import { RoomCard } from "../components/RoomCard";
 import { Header } from "../components/Header";
 import Image from "next/image";
+import { Room } from "@/utils/types/room";
 
 export const getStaticProps: GetStaticProps<{
   rooms: Room[];
