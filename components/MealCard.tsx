@@ -1,4 +1,4 @@
-import { Meal } from "../types/meal";
+import { Meal } from "@/utils/types/meal";
 
 export const MealCard = ({ meal, index }: { meal: Meal; index: number }) => {
   const activeDay = new Date().getUTCDay();

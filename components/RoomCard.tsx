@@ -1,5 +1,5 @@
+import { Room } from "@/utils/types/room";
 import Link from "next/link";
-import { Room } from "../types/room";
 
 export const RoomCard = ({ room }: { room: Room }) => {
   return (

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { CONTENTFUL_BASE_URL } from "../constants";
-import { Room } from "../types/room";
+
 import { ParsedUrlQuery } from "querystring";
 import { Floor1 } from "../components/Floors/floor1";
 import { Floor2 } from "../components/Floors/floor2";
@@ -12,6 +12,7 @@ import { Floor3Mobile } from "../components/Floors/floor3mobile";
 import { Header } from "../components/Header";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { Room } from "@/utils/types/room";
 
 interface IParams extends ParsedUrlQuery {
   name: string;

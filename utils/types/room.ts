@@ -1,9 +1,9 @@
 export interface Room {
   fields: {
     name: string;
-    description: string;
     floor: string;
     roomnumber: string;
+    type: string;
   };
   sys: {
     id: string;
