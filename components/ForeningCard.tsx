@@ -1,3 +1,5 @@
+import { Forening } from "@/utils/types/forening";
+
 export const ForeningCard = ({ forening }: { forening: Forening }) => {
   return (
     <li className="w-10/12 sm:w-3/12 h-[200px] rounded bg-blue p-5 text-white hover:bg-blue-dark hover:text-blue-light">
