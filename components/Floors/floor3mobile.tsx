@@ -986,7 +986,7 @@ export const Floor3Mobile = () => {
           />
         </g>
         <rect
-          id="Rectangle 104"
+          id="3267"
           x="228.5"
           y="222.5"
           width="46"

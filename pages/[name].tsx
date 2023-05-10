@@ -50,16 +50,16 @@ export const getStaticProps: GetStaticProps<{ room: Room }> = async (
   };
 };
 
-const floor = (room: Room) => {
-  switch (room.fields.floor) {
-    case "1":
-      return <Floor1 />;
-    case "2":
-      return <Floor2 />;
-    case "3":
-      return <Floor3 />;
-  }
-};
+// const floor = (room: Room) => {
+//   switch (room.fields.floor) {
+//     case "1":
+//       return <Floor1 />;
+//     case "2":
+//       return <Floor2 />;
+//     case "3":
+//       return <Floor3 />;
+//   }
+// };
 
 const mobileFloor = (room: Room) => {
   switch (room.fields.floor) {
