@@ -1,6 +1,10 @@
 import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { SIO_BASE_URL, getStaticPropsRevalidationTime } from "../../constants";
+import {
+  SIO_BASE_URL,
+  getStaticPropsRevalidationTime,
+  getStaticPropsRevalidationTimeKantine,
+} from "../../constants";
 import * as cheerio from "cheerio";
 import { MealCard } from "../../components/MealCard";
 import { Header } from "../../components/Header";
@@ -35,7 +39,7 @@ export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
     props: {
       meals,
     },
-    revalidate: getStaticPropsRevalidationTime,
+    revalidate: getStaticPropsRevalidationTimeKantine,
   };
 };
 
