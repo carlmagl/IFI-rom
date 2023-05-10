@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps<{
       rooms,
       weather,
     },
-    revalidate: 60,
+    revalidate: getStaticPropsRevalidationTime,
   };
 };
 

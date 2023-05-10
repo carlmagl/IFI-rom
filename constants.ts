@@ -1,5 +1,3 @@
-import { getStaticProps } from "./pages";
-
 export const CONTENTFUL_BASE_URL = "https://cdn.contentful.com";
 export const SIO_BASE_URL =
   "https://sio.no/mat-og-drikke/spisesteder/Ole-Johan-spiseri";
@@ -15,8 +13,7 @@ export const navLinks: readonly { label: string; href: string }[] = [
   // { label: "Arrangementer", href: "/arrangementer" },
 ];
 
-// export const getStaticPropsRevalidationTime = 3600; // 1 hour
-export const getStaticPropsRevalidationTime = 60; // 5 minutesa
+export const getStaticPropsRevalidationTime = 600; // 10 minutes
 
 export const IFI_LAT = "59.9145";
 export const IFI_LONG = "10.7499";

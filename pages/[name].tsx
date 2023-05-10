@@ -1,6 +1,9 @@
 import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { CONTENTFUL_BASE_URL } from "../constants";
+import {
+  CONTENTFUL_BASE_URL,
+  getStaticPropsRevalidationTime,
+} from "../constants";
 
 import { ParsedUrlQuery } from "querystring";
 import { Floor1 } from "../components/Floors/floor1";
@@ -10,7 +13,7 @@ import { Floor1Mobile } from "../components/Floors/floor1mobile";
 import { Floor2Mobile } from "../components/Floors/floor2mobile";
 import { Floor3Mobile } from "../components/Floors/floor3mobile";
 import { Header } from "../components/Header";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { Room } from "@/utils/types/room";
 
@@ -47,6 +50,7 @@ export const getStaticProps: GetStaticProps<{ room: Room }> = async (
     props: {
       room,
     },
+    revalidate: getStaticPropsRevalidationTime,
   };
 };
 
