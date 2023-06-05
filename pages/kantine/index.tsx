@@ -61,7 +61,10 @@ export default function Kantine({
         {!meals.length && (
           <p>
             Kunne ikke laste inn dataen fra SIO, sjekk selv hos{" "}
-            <a href={SIO_BASE_URL}>SiO</a>.
+            <a className="underline text-purple" href={SIO_BASE_URL}>
+              SiO
+            </a>
+            .
           </p>
         )}
       </section>
