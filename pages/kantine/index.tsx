@@ -15,8 +15,8 @@ export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
   const roomsResponse = await axios.get(SIO_BASE_URL);
   const $ = cheerio.load(roomsResponse.data);
   const meals: Meal[] = [];
-  const divContainer = ".sc-2a266338-1.feXPjw.sc-ab70ceae-0.fyqHlM";
-  let count = 3;
+  const divContainer = ".sc-4654dfe8-1 gwlwpA sc-ab70ceae-0 dAOACB";
+
   // days.forEach((day, i) => {
   //   meals.push({
   //     meal: $(`${divContainer} p:nth-child(${count})`).text(),
@@ -25,15 +25,16 @@ export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
   //   });
   //   count += 6;
   // });
-  $(divContainer)
-    .find("ul")
-    .each((i, ul) => {
-      meals.push({
-        meal: $(ul).find("li").first().text(),
-        veg: $(ul).find("li").last().text(),
-        day: days[i],
-      });
-    });
+
+  // $(divContainer)
+  //   .find("ul")
+  //   .each((i, ul) => {
+  //     meals.push({
+  //       meal: $(ul).find("li").first().text(),
+  //       veg: $(ul).find("li").last().text(),
+  //       day: days[i],
+  //     });
+  //   });
 
   return {
     props: {
@@ -59,13 +60,15 @@ export default function Kantine({
           ))}
         </ul>
         {!meals.length && (
-          <p>
-            Kunne ikke laste inn dataen fra SIO, sjekk selv hos{" "}
-            <a className="underline text-purple" href={SIO_BASE_URL}>
-              SiO
-            </a>
-            .
-          </p>
+          <div className="flex w-full justify-center p-8">
+            <p>
+              Kunne ikke laste inn dataen fra SIO, sjekk selv hos{" "}
+              <a className="underline text-purple" href={SIO_BASE_URL}>
+                SiO
+              </a>
+              .
+            </p>
+          </div>
         )}
       </section>
     </Header>
